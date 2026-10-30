@@ -1,0 +1,1925 @@
+[
+ {
+  "id": 1,
+  "question": "Which subnet mask supports at least 50 usable IPv4 host addresses?",
+  "options": [
+   "/27",
+   "/26",
+   "/28",
+   "/29"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A /26 has 64 total addresses and 62 traditionally usable host addresses.",
+  "multi": false
+ },
+ {
+  "id": 2,
+  "question": "Which IPv4 prefix provides two usable host addresses for a point-to-point link?",
+  "options": [
+   "/24",
+   "/29",
+   "/30",
+   "/28"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "A /30 contains four addresses: network, two usable hosts, and broadcast.",
+  "multi": false
+ },
+ {
+  "id": 3,
+  "question": "How many traditionally usable host addresses are in a /24 IPv4 subnet?",
+  "options": [
+   "128",
+   "254",
+   "256",
+   "62"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A /24 has 256 total addresses; excluding network and broadcast leaves 254.",
+  "multi": false
+ },
+ {
+  "id": 4,
+  "question": "What is the length of an IPv6 address?",
+  "options": [
+   "32 bits",
+   "48 bits",
+   "64 bits",
+   "128 bits"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "IPv6 addresses are 128 bits long.",
+  "multi": false
+ },
+ {
+  "id": 5,
+  "question": "Which protocol resolves an IPv4 address to a MAC address on a local Ethernet network?",
+  "options": [
+   "DNS",
+   "ARP",
+   "DHCP",
+   "NTP"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "ARP maps a local IPv4 address to a link-layer MAC address.",
+  "multi": false
+ },
+ {
+  "id": 6,
+  "question": "Which protocol is preferred for encrypted remote CLI access to a Junos device?",
+  "options": [
+   "Telnet",
+   "FTP",
+   "SSH",
+   "TFTP"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "SSH encrypts the remote management session; Telnet does not.",
+  "multi": false
+ },
+ {
+  "id": 7,
+  "question": "What is the main purpose of route preference in Junos OS?",
+  "options": [
+   "Select an active route among competing routes to the same prefix",
+   "Assign MAC addresses",
+   "Encrypt routing updates",
+   "Set interface speed"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Lower Junos route preference values are preferred when comparing routes to the same destination from different sources.",
+  "multi": false
+ },
+ {
+  "id": 8,
+  "question": "Which Junos feature controls which routes are accepted or advertised?",
+  "options": [
+   "Interface groups",
+   "Routing policy",
+   "System logging",
+   "Chassis alarm"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Import and export policies filter or modify routing information.",
+  "multi": false
+ },
+ {
+  "id": 9,
+  "question": "Which command displays the current active configuration in Junos operational mode?",
+  "options": [
+   "show configuration",
+   "show interfaces terse",
+   "show route",
+   "monitor traffic"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Use `show configuration` from operational mode to view the committed configuration.",
+  "multi": false
+ },
+ {
+  "id": 10,
+  "question": "Which command enters configuration mode from the Junos operational CLI?",
+  "options": [
+   "configure",
+   "edit system",
+   "commit",
+   "start shell"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The `configure` command enters configuration mode.",
+  "multi": false
+ },
+ {
+  "id": 11,
+  "question": "Which command saves and activates candidate configuration changes?",
+  "options": [
+   "rollback",
+   "commit",
+   "exit",
+   "show"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A successful `commit` activates the candidate configuration.",
+  "multi": false
+ },
+ {
+  "id": 12,
+  "question": "Which command checks candidate configuration syntax without activating it?",
+  "options": [
+   "commit check",
+   "show route",
+   "request system reboot",
+   "clear interfaces"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`commit check` validates the candidate configuration.",
+  "multi": false
+ },
+ {
+  "id": 13,
+  "question": "Which command discards uncommitted candidate changes and returns to the active configuration?",
+  "options": [
+   "commit",
+   "rollback 0",
+   "save",
+   "restart"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "`rollback 0` loads the active configuration into the candidate configuration.",
+  "multi": false
+ },
+ {
+  "id": 14,
+  "question": "Which command displays a concise list of interfaces and their status?",
+  "options": [
+   "show interfaces terse",
+   "show system users",
+   "show route summary",
+   "show chassis hardware"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The terse view summarizes interface names, addresses, and link/protocol status.",
+  "multi": false
+ },
+ {
+  "id": 15,
+  "question": "Which command displays the IPv4 routing table?",
+  "options": [
+   "show arp",
+   "show route",
+   "show system alarms",
+   "show configuration"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "`show route` displays routes in the routing table.",
+  "multi": false
+ },
+ {
+  "id": 16,
+  "question": "Which command displays the ARP table?",
+  "options": [
+   "show arp",
+   "show route",
+   "show system uptime",
+   "show version"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`show arp` displays IPv4-to-MAC neighbor mappings.",
+  "multi": false
+ },
+ {
+  "id": 17,
+  "question": "Which Junos interface prefix commonly denotes 10-Gigabit Ethernet?",
+  "options": [
+   "ge",
+   "xe",
+   "fe",
+   "lo"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "`xe` is commonly used for 10-Gigabit Ethernet interfaces.",
+  "multi": false
+ },
+ {
+  "id": 18,
+  "question": "What does the `ge-0/0/0` interface name identify?",
+  "options": [
+   "A logical loopback",
+   "A Gigabit Ethernet physical interface",
+   "A routing instance",
+   "A VLAN tag"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The `ge` prefix denotes Gigabit Ethernet; the remaining fields identify hardware location and port.",
+  "multi": false
+ },
+ {
+  "id": 19,
+  "question": "What does `lo0` commonly represent on a Juniper router?",
+  "options": [
+   "Loopback interface",
+   "Management Ethernet only",
+   "Console port",
+   "Optical module"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`lo0` is the loopback interface, often used for stable router identifiers and services.",
+  "multi": false
+ },
+ {
+  "id": 20,
+  "question": "Which component runs routing protocols and maintains routing tables in Junos architecture?",
+  "options": [
+   "Packet Forwarding Engine",
+   "Routing Engine",
+   "Transceiver",
+   "Power supply"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The Routing Engine handles control-plane functions.",
+  "multi": false
+ },
+ {
+  "id": 21,
+  "question": "Which component forwards transit packets at high speed?",
+  "options": [
+   "Routing Engine",
+   "Packet Forwarding Engine",
+   "CLI shell",
+   "Configuration database"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The PFE forwards packets using forwarding information supplied by the Routing Engine.",
+  "multi": false
+ },
+ {
+  "id": 22,
+  "question": "What is transit traffic?",
+  "options": [
+   "Traffic destined for the router itself",
+   "User traffic passing through the device",
+   "Console traffic only",
+   "Configuration text"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Transit traffic is forwarded through the device rather than terminating on the device.",
+  "multi": false
+ },
+ {
+  "id": 23,
+  "question": "What is exception traffic in Junos OS?",
+  "options": [
+   "Traffic requiring special processing by the Routing Engine",
+   "All traffic dropped at ingress",
+   "Only DNS traffic",
+   "Traffic sent over fiber"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Packets such as traffic destined to the device itself may require control-plane processing.",
+  "multi": false
+ },
+ {
+  "id": 24,
+  "question": "Which two planes are commonly distinguished in Junos architecture?",
+  "options": [
+   "Control plane and forwarding plane",
+   "North plane and south plane",
+   "Storage and display plane",
+   "Wired and wireless plane"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The control plane handles routing and protocols; the forwarding plane handles packet forwarding.",
+  "multi": false
+ },
+ {
+  "id": 25,
+  "question": "Which two protocols are commonly used for centralized remote authentication?",
+  "options": [
+   "RADIUS",
+   "TACACS+",
+   "ARP",
+   "ICMP"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "RADIUS and TACACS+ are authentication/AAA protocols used with network devices.",
+  "multi": true
+ },
+ {
+  "id": 26,
+  "question": "Which protocol is used to translate domain names into IP addresses?",
+  "options": [
+   "DNS",
+   "SNMP",
+   "SSH",
+   "LLDP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "DNS resolves names to records such as IP addresses.",
+  "multi": false
+ },
+ {
+  "id": 27,
+  "question": "Which protocol automatically leases IP configuration to clients?",
+  "options": [
+   "NTP",
+   "DHCP",
+   "FTP",
+   "BGP"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "DHCP can provide an address, subnet mask, gateway, and other options.",
+  "multi": false
+ },
+ {
+  "id": 28,
+  "question": "Which protocol synchronizes system clocks across a network?",
+  "options": [
+   "NTP",
+   "ARP",
+   "SMTP",
+   "STP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "NTP synchronizes device time.",
+  "multi": false
+ },
+ {
+  "id": 29,
+  "question": "Which protocol discovers directly connected neighboring network devices at Layer 2?",
+  "options": [
+   "LLDP",
+   "BGP",
+   "DNS",
+   "RDP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "LLDP advertises device identity and capabilities to directly connected neighbors.",
+  "multi": false
+ },
+ {
+  "id": 30,
+  "question": "Which protocol prevents Layer 2 switching loops?",
+  "options": [
+   "OSPF",
+   "STP",
+   "BGP",
+   "DHCP"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Spanning Tree Protocol prevents bridging loops by blocking redundant paths as needed.",
+  "multi": false
+ },
+ {
+  "id": 31,
+  "question": "Which routing protocol is a link-state interior gateway protocol?",
+  "options": [
+   "OSPF",
+   "FTP",
+   "ARP",
+   "SNMP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "OSPF is a link-state IGP.",
+  "multi": false
+ },
+ {
+  "id": 32,
+  "question": "Which routing protocol is commonly used between autonomous systems on the Internet?",
+  "options": [
+   "RIP",
+   "BGP",
+   "LLDP",
+   "NTP"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "BGP is the interdomain routing protocol.",
+  "multi": false
+ },
+ {
+  "id": 33,
+  "question": "Which OSPF packet type discovers and maintains neighbor relationships?",
+  "options": [
+   "Hello",
+   "DHCP Discover",
+   "ARP Reply",
+   "TCP SYN"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "OSPF Hello packets discover neighbors and maintain adjacency parameters.",
+  "multi": false
+ },
+ {
+  "id": 34,
+  "question": "What is the purpose of an OSPF designated router on a broadcast network?",
+  "options": [
+   "Reduce adjacency and LSA exchange overhead",
+   "Assign IP addresses",
+   "Encrypt packets",
+   "Replace the routing table"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The DR/BDR mechanism reduces the number of full adjacencies on multiaccess networks.",
+  "multi": false
+ },
+ {
+  "id": 35,
+  "question": "What does a default route represent?",
+  "options": [
+   "A route used when no more specific matching route exists",
+   "A route to every subnet separately",
+   "A route that disables routing",
+   "A MAC address entry"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The default route is the fallback when no more-specific route matches.",
+  "multi": false
+ },
+ {
+  "id": 36,
+  "question": "What does the Junos route preference value indicate?",
+  "options": [
+   "Relative preference of a route source",
+   "Link bandwidth",
+   "Packet size",
+   "Interface MTU"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "A lower route preference value is preferred when comparing eligible routes to the same prefix.",
+  "multi": false
+ },
+ {
+  "id": 37,
+  "question": "Which command displays Junos OS version and system information?",
+  "options": [
+   "show version",
+   "show arp",
+   "show route",
+   "show ethernet-switching table"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`show version` displays software and platform version details.",
+  "multi": false
+ },
+ {
+  "id": 38,
+  "question": "Which command displays chassis hardware inventory?",
+  "options": [
+   "show chassis hardware",
+   "show system users",
+   "show route",
+   "show log messages"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "This command lists installed hardware components.",
+  "multi": false
+ },
+ {
+  "id": 39,
+  "question": "Which command displays system alarms?",
+  "options": [
+   "show system alarms",
+   "show arp",
+   "show interfaces descriptions",
+   "show route"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "It displays active system alarms.",
+  "multi": false
+ },
+ {
+  "id": 40,
+  "question": "Which command displays recent system log messages in the standard messages log?",
+  "options": [
+   "show log messages",
+   "show route",
+   "show arp",
+   "show chassis fpc"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`show log messages` displays the system messages log.",
+  "multi": false
+ },
+ {
+  "id": 41,
+  "question": "What is the purpose of a candidate configuration?",
+  "options": [
+   "Hold proposed changes before commit",
+   "Store only ARP entries",
+   "Forward packets",
+   "Replace the kernel"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Junos uses a candidate configuration so changes can be reviewed and committed as a set.",
+  "multi": false
+ },
+ {
+  "id": 42,
+  "question": "What does `commit confirmed` do?",
+  "options": [
+   "Commits changes temporarily and rolls back unless confirmed within the timer",
+   "Permanently disables rollback",
+   "Reboots the router immediately",
+   "Clears all interfaces"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "It helps prevent loss of remote access by automatically reverting if not confirmed.",
+  "multi": false
+ },
+ {
+  "id": 43,
+  "question": "What does `rollback 1` generally do in configuration mode?",
+  "options": [
+   "Loads the prior committed configuration version into the candidate",
+   "Deletes the device OS",
+   "Clears all routes",
+   "Confirms a commit"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Rollback numbers refer to saved configuration versions; `rollback 1` loads the previous version.",
+  "multi": false
+ },
+ {
+  "id": 44,
+  "question": "Which statement about IPv6 is correct?",
+  "options": [
+   "IPv6 uses ARP",
+   "IPv6 has a 128-bit address",
+   "IPv6 has a mandatory IPv4 checksum",
+   "IPv6 addresses are 32 bits"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "IPv6 uses 128-bit addresses and Neighbor Discovery rather than ARP.",
+  "multi": false
+ },
+ {
+  "id": 45,
+  "question": "Which protocol replaces ARP functionality for IPv6 neighbor resolution?",
+  "options": [
+   "NDP (Neighbor Discovery Protocol)",
+   "FTP",
+   "RADIUS",
+   "BGP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "IPv6 Neighbor Discovery uses ICMPv6 messages to discover neighbors and resolve link-layer addresses.",
+  "multi": false
+ },
+ {
+  "id": 46,
+  "question": "What is the IPv6 link-local prefix?",
+  "options": [
+   "2000::/3",
+   "fe80::/10",
+   "ff00::/8",
+   "::1/128"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "IPv6 link-local unicast addresses use fe80::/10 and are not forwarded by routers.",
+  "multi": false
+ },
+ {
+  "id": 47,
+  "question": "Which IPv6 address is the loopback address?",
+  "options": [
+   "::",
+   "::1",
+   "fe80::1",
+   "ff02::1"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "`::1` is the IPv6 loopback address.",
+  "multi": false
+ },
+ {
+  "id": 48,
+  "question": "What does CIDR notation `/26` mean?",
+  "options": [
+   "26 host bits",
+   "26 network-prefix bits",
+   "26 total addresses",
+   "26 subnets always"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The slash number is the number of leading network-prefix bits.",
+  "multi": false
+ },
+ {
+  "id": 49,
+  "question": "How many total IPv4 addresses are in a /27 subnet?",
+  "options": [
+   "16",
+   "32",
+   "64",
+   "128"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A /27 leaves 5 host bits, so 2^5 = 32 total addresses.",
+  "multi": false
+ },
+ {
+  "id": 50,
+  "question": "Which subnet mask corresponds to /24?",
+  "options": [
+   "255.255.255.0",
+   "255.255.255.128",
+   "255.255.0.0",
+   "255.255.255.192"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "A /24 mask has 24 one-bits: 255.255.255.0.",
+  "multi": false
+ },
+ {
+  "id": 51,
+  "question": "Which subnet mask corresponds to /30?",
+  "options": [
+   "255.255.255.0",
+   "255.255.255.252",
+   "255.255.255.248",
+   "255.255.255.192"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A /30 mask is 255.255.255.252.",
+  "multi": false
+ },
+ {
+  "id": 52,
+  "question": "What is the purpose of a VLAN?",
+  "options": [
+   "Logically segment a Layer 2 network",
+   "Encrypt every packet",
+   "Assign BGP AS numbers",
+   "Replace routing protocols"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "VLANs create separate Layer 2 broadcast domains.",
+  "multi": false
+ },
+ {
+  "id": 53,
+  "question": "What is an access port typically used for?",
+  "options": [
+   "Carry one data VLAN for an end device",
+   "Carry every VLAN tagged",
+   "Establish BGP",
+   "Assign DNS records"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "An access port usually connects an endpoint to one VLAN.",
+  "multi": false
+ },
+ {
+  "id": 54,
+  "question": "What is a trunk port typically used for?",
+  "options": [
+   "Carry multiple VLANs between network devices",
+   "Carry only untagged user traffic always",
+   "Run DHCP server only",
+   "Connect only console cables"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Trunks carry multiple VLANs, typically using IEEE 802.1Q tags.",
+  "multi": false
+ },
+ {
+  "id": 55,
+  "question": "What is the purpose of an Ethernet switching table?",
+  "options": [
+   "Map MAC addresses to switch interfaces/VLANs",
+   "Store DNS names",
+   "Store BGP policies",
+   "Store user passwords"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Switches learn source MAC addresses and use the table to forward frames.",
+  "multi": false
+ },
+ {
+  "id": 56,
+  "question": "What is the purpose of an IP routing table?",
+  "options": [
+   "Determine the next hop/interface for destination IP prefixes",
+   "Map MAC addresses only",
+   "Store system logs",
+   "Assign console passwords"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The routing table holds reachability information used to determine paths.",
+  "multi": false
+ },
+ {
+  "id": 57,
+  "question": "Which Junos statement is used to configure a static route?",
+  "options": [
+   "set routing-options static route ...",
+   "set system arp route ...",
+   "set interfaces static-route ...",
+   "set protocols ethernet route ..."
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Static routes are configured under `routing-options static`.",
+  "multi": false
+ },
+ {
+  "id": 58,
+  "question": "Which configuration hierarchy typically contains OSPF settings?",
+  "options": [
+   "protocols ospf",
+   "system ospf",
+   "chassis ospf",
+   "security ospf only"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "OSPF is configured under the protocols hierarchy.",
+  "multi": false
+ },
+ {
+  "id": 59,
+  "question": "Which configuration hierarchy typically contains BGP settings?",
+  "options": [
+   "protocols bgp",
+   "interfaces bgp",
+   "system bgp only",
+   "chassis bgp"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "BGP is configured under `protocols bgp`.",
+  "multi": false
+ },
+ {
+  "id": 60,
+  "question": "What does an import routing policy do?",
+  "options": [
+   "Controls routes received into a routing table/protocol",
+   "Controls physical fan speed",
+   "Changes terminal color",
+   "Reboots the device"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Import policies apply to routes learned from routing protocols or routing instances.",
+  "multi": false
+ },
+ {
+  "id": 61,
+  "question": "What does an export routing policy do?",
+  "options": [
+   "Controls routes advertised to a protocol neighbor",
+   "Controls console baud rate",
+   "Enables SSH encryption only",
+   "Sets disk capacity"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Export policies determine which routes are advertised and can modify attributes.",
+  "multi": false
+ },
+ {
+  "id": 62,
+  "question": "What is a firewall filter in Junos commonly used for?",
+  "options": [
+   "Match traffic and apply actions such as accept or discard",
+   "Assign hostnames",
+   "Synchronize time",
+   "Resolve MAC addresses"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Firewall filters classify packets and apply configured actions.",
+  "multi": false
+ },
+ {
+  "id": 63,
+  "question": "What does the `family inet` hierarchy generally configure on an interface?",
+  "options": [
+   "IPv4 protocol family",
+   "IPv6 only",
+   "Ethernet switching only",
+   "Chassis alarms"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`family inet` is used for IPv4 interface addressing and protocol options.",
+  "multi": false
+ },
+ {
+  "id": 64,
+  "question": "What does the `family inet6` hierarchy generally configure?",
+  "options": [
+   "IPv6 protocol family",
+   "IPv4 only",
+   "Layer 2 MAC learning only",
+   "NTP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`family inet6` is used for IPv6 interface configuration.",
+  "multi": false
+ },
+ {
+  "id": 65,
+  "question": "What is the purpose of a loopback interface address on a router?",
+  "options": [
+   "Provide a stable logical address independent of a physical interface state",
+   "Increase physical port speed",
+   "Replace the routing table",
+   "Disable routing protocols"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Loopback addresses remain available while at least one route to them exists and are commonly used as router IDs or management endpoints.",
+  "multi": false
+ },
+ {
+  "id": 66,
+  "question": "Which service provides encrypted file transfer over SSH?",
+  "options": [
+   "SCP",
+   "TFTP",
+   "Telnet",
+   "SNMP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "SCP transfers files over an SSH-secured connection.",
+  "multi": false
+ },
+ {
+  "id": 67,
+  "question": "Which protocol is commonly used for network monitoring and management polling/traps?",
+  "options": [
+   "SNMP",
+   "ARP",
+   "STP",
+   "ICMP only"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "SNMP supports management queries and notifications/traps.",
+  "multi": false
+ },
+ {
+  "id": 68,
+  "question": "What is the primary purpose of syslog?",
+  "options": [
+   "Send/store event and diagnostic messages",
+   "Assign IP addresses",
+   "Resolve domain names",
+   "Build Ethernet trunks"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Syslog is used for collecting system and application messages.",
+  "multi": false
+ },
+ {
+  "id": 69,
+  "question": "What does a successful ping primarily test?",
+  "options": [
+   "IP reachability using ICMP Echo",
+   "DNS zone transfer",
+   "TCP application login",
+   "VLAN trunk negotiation"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Ping uses ICMP Echo Request/Reply, though filtering can affect results.",
+  "multi": false
+ },
+ {
+  "id": 70,
+  "question": "What is the purpose of traceroute?",
+  "options": [
+   "Discover Layer 3 hops along a path",
+   "Learn MAC addresses on a switch",
+   "Configure a static route",
+   "Encrypt a session"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Traceroute uses TTL/hop-limit behavior and responses to infer path hops.",
+  "multi": false
+ },
+ {
+  "id": 71,
+  "question": "What does MTU define?",
+  "options": [
+   "Maximum packet/frame payload size supported at a link layer",
+   "Number of routing protocols",
+   "Number of VLANs",
+   "Maximum user accounts"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "MTU limits the size of a packet that can be carried without fragmentation at the relevant layer.",
+  "multi": false
+ },
+ {
+  "id": 72,
+  "question": "What is the purpose of an Ethernet MAC address?",
+  "options": [
+   "Identify a network interface at Layer 2",
+   "Identify a DNS domain",
+   "Specify an IP prefix",
+   "Select an OSPF area"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "MAC addresses are link-layer identifiers used in local Ethernet delivery.",
+  "multi": false
+ },
+ {
+  "id": 73,
+  "question": "Which statement about Junos configuration commits is correct?",
+  "options": [
+   "Changes are normally activated by commit",
+   "Every keystroke is immediately active",
+   "Commit deletes rollback history",
+   "Configuration mode cannot validate syntax"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Candidate changes are applied to the active configuration when committed.",
+  "multi": false
+ },
+ {
+  "id": 74,
+  "question": "What does `show route receive-protocol bgp` help inspect?",
+  "options": [
+   "Routes received from a BGP neighbor",
+   "System fan speed",
+   "ARP cache only",
+   "User login history"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "This command can display routes received from a specified BGP peer, subject to platform/version behavior.",
+  "multi": false
+ },
+ {
+  "id": 75,
+  "question": "Which command is commonly used to display BGP summary information in Junos?",
+  "options": [
+   "show bgp summary",
+   "show arp summary",
+   "show chassis bgp",
+   "show system bgp"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "`show bgp summary` shows BGP peer/session summary.",
+  "multi": false
+ },
+ {
+  "id": 76,
+  "question": "What does an established BGP session indicate?",
+  "options": [
+   "The peers have formed a working BGP session",
+   "All routes are necessarily accepted",
+   "Every route is active",
+   "The interface is always error-free"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Established means the BGP session is up; policy and route selection still determine accepted/active routes.",
+  "multi": false
+ },
+ {
+  "id": 77,
+  "question": "What is the purpose of OSPF areas?",
+  "options": [
+   "Structure the OSPF domain and limit some flooding/LSDB scope",
+   "Encrypt all OSPF packets",
+   "Replace IP addressing",
+   "Assign MAC addresses"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Areas provide hierarchical organization and reduce routing information scope.",
+  "multi": false
+ },
+ {
+  "id": 78,
+  "question": "Which OSPF area type blocks external LSAs and uses a default route for external reachability?",
+  "options": [
+   "Stub area",
+   "Backbone area only",
+   "Transit VLAN",
+   "Management instance"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "A stub area restricts external LSAs and relies on a default route; exact behavior varies by stub-area type.",
+  "multi": false
+ },
+ {
+  "id": 79,
+  "question": "What is the OSPF backbone area ID?",
+  "options": [
+   "0.0.0.0",
+   "255.255.255.255",
+   "1.1.1.1",
+   "127.0.0.1"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "OSPF backbone area is Area 0, represented as 0.0.0.0.",
+  "multi": false
+ },
+ {
+  "id": 80,
+  "question": "Which protocol is connection-oriented and reliable at the transport layer?",
+  "options": [
+   "TCP",
+   "UDP",
+   "ARP",
+   "ICMP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "TCP provides connection-oriented, reliable byte-stream transport.",
+  "multi": false
+ },
+ {
+  "id": 81,
+  "question": "Which protocol is connectionless at the transport layer?",
+  "options": [
+   "TCP",
+   "UDP",
+   "SSH",
+   "HTTPS"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "UDP sends datagrams without TCP-style connection setup or delivery guarantees.",
+  "multi": false
+ },
+ {
+  "id": 82,
+  "question": "Which port is the default for SSH?",
+  "options": [
+   "TCP 22",
+   "TCP 23",
+   "UDP 53",
+   "TCP 80"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "SSH conventionally uses TCP port 22.",
+  "multi": false
+ },
+ {
+  "id": 83,
+  "question": "Which port is the default for DNS queries?",
+  "options": [
+   "TCP 25",
+   "UDP/TCP 53",
+   "TCP 443",
+   "UDP 161"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "DNS commonly uses UDP 53 and TCP 53 when needed.",
+  "multi": false
+ },
+ {
+  "id": 84,
+  "question": "Which port is commonly used by SNMP queries?",
+  "options": [
+   "UDP 161",
+   "TCP 22",
+   "TCP 179",
+   "UDP 514"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "SNMP managers commonly query agents on UDP 161; traps commonly use UDP 162.",
+  "multi": false
+ },
+ {
+  "id": 85,
+  "question": "Which port is commonly used by BGP?",
+  "options": [
+   "TCP 179",
+   "UDP 67",
+   "TCP 23",
+   "UDP 500"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "BGP uses TCP port 179.",
+  "multi": false
+ },
+ {
+  "id": 86,
+  "question": "What is the purpose of AAA in network device administration?",
+  "options": [
+   "Authentication, authorization, and accounting",
+   "Address, ARP, and adjacency",
+   "Alarm, audit, and automation only",
+   "Application availability analysis"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "AAA verifies identity, controls permissions, and records activity.",
+  "multi": false
+ },
+ {
+  "id": 87,
+  "question": "Which statement about RADIUS and TACACS+ is generally correct?",
+  "options": [
+   "They support centralized AAA functions",
+   "They are routing protocols",
+   "They replace IPv6 Neighbor Discovery",
+   "They are Ethernet standards"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Both can centralize authentication and authorization; their detailed behavior differs.",
+  "multi": false
+ },
+ {
+  "id": 88,
+  "question": "What is the purpose of a management routing instance?",
+  "options": [
+   "Separate management traffic from the default routing table",
+   "Increase the number of physical ports",
+   "Disable all routing",
+   "Convert IPv4 to MAC addresses"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "A dedicated management instance can isolate out-of-band management reachability.",
+  "multi": false
+ },
+ {
+  "id": 89,
+  "question": "Which Junos interface is commonly used for out-of-band management on many platforms?",
+  "options": [
+   "fxp0 or em0, depending on platform",
+   "lo0 only",
+   "ge-0/0/0 always",
+   "xe-0/0/0 only"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The management interface name varies by Juniper platform.",
+  "multi": false
+ },
+ {
+  "id": 90,
+  "question": "What is the purpose of `transfer-on-commit` under system archival configuration?",
+  "options": [
+   "Archive configuration after a successful commit",
+   "Automatically upgrade Junos",
+   "Restart BGP after each commit",
+   "Clear the candidate configuration"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "It triggers configuration archival on commit when archive destinations are configured.",
+  "multi": false
+ },
+ {
+  "id": 91,
+  "question": "What is the role of `archive-sites` in Junos system archival configuration?",
+  "options": [
+   "Specify remote destinations for archived configurations",
+   "Configure OSPF areas",
+   "Define DNS servers only",
+   "Set interface descriptions"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Archive destinations identify where configuration copies should be transferred.",
+  "multi": false
+ },
+ {
+  "id": 92,
+  "question": "What is the main role of a routing protocol policy term's `from` section?",
+  "options": [
+   "Define match conditions",
+   "Define chassis alarm thresholds",
+   "Assign interface MAC addresses",
+   "Set CLI prompt color"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The `from` section matches route attributes or prefixes.",
+  "multi": false
+ },
+ {
+  "id": 93,
+  "question": "What is the main role of a policy term's `then` section?",
+  "options": [
+   "Specify actions for matched routes",
+   "Define physical port speed",
+   "Configure SSH keys only",
+   "Assign a hostname"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The `then` section accepts, rejects, or modifies route attributes.",
+  "multi": false
+ },
+ {
+  "id": 94,
+  "question": "Which command displays learned Ethernet switching MAC entries on supported Junos switches?",
+  "options": [
+   "show ethernet-switching table",
+   "show route",
+   "show system users",
+   "show arp"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "This command displays the Ethernet switching table on supported platforms.",
+  "multi": false
+ },
+ {
+  "id": 95,
+  "question": "Which command can display interface counters and detailed interface statistics?",
+  "options": [
+   "show interfaces extensive",
+   "show version",
+   "show system users",
+   "show configuration groups"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The extensive interface view includes counters, errors, and detailed status.",
+  "multi": false
+ },
+ {
+  "id": 96,
+  "question": "What does an interface being administratively down usually mean?",
+  "options": [
+   "It has been disabled by configuration or administration",
+   "It has a full BGP table",
+   "It is necessarily physically damaged",
+   "It has no MAC address globally"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Administrative state is controlled by configuration/administrative action, distinct from physical link state.",
+  "multi": false
+ },
+ {
+  "id": 97,
+  "question": "Which command can show system uptime?",
+  "options": [
+   "show system uptime",
+   "show route uptime",
+   "show arp uptime",
+   "show interfaces uptime"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "It reports how long the system has been running.",
+  "multi": false
+ },
+ {
+  "id": 98,
+  "question": "What is the purpose of configuration groups in Junos?",
+  "options": [
+   "Reuse configuration statements across hierarchy locations",
+   "Create physical Ethernet ports",
+   "Replace routing policies",
+   "Encrypt all traffic automatically"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Groups help reuse configuration through `apply-groups`.",
+  "multi": false
+ },
+ {
+  "id": 99,
+  "question": "What does `apply-groups` do?",
+  "options": [
+   "Apply configuration statements defined in a group",
+   "Restart the Routing Engine",
+   "Show BGP peers",
+   "Clear interface counters"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "It incorporates group-defined configuration at the applicable hierarchy.",
+  "multi": false
+ },
+ {
+  "id": 100,
+  "question": "Which Junos command is used to compare candidate changes with the active configuration?",
+  "options": [
+   "show | compare",
+   "show route compare",
+   "show arp compare",
+   "monitor compare"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "In configuration mode, `show | compare` displays candidate differences.",
+  "multi": false
+ },
+ {
+  "id": 101,
+  "question": "What is the purpose of `deactivate` in Junos configuration?",
+  "options": [
+   "Disable a configuration statement without deleting it",
+   "Permanently erase all rollback files",
+   "Restart the router",
+   "Enable all interfaces"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Deactivated statements remain in configuration but are not applied.",
+  "multi": false
+ },
+ {
+  "id": 102,
+  "question": "What is the purpose of `delete` in Junos configuration mode?",
+  "options": [
+   "Remove a configuration statement or hierarchy",
+   "Temporarily disable a statement only",
+   "Commit automatically",
+   "Show logs"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The `delete` command removes the specified candidate configuration statement.",
+  "multi": false
+ },
+ {
+  "id": 103,
+  "question": "Which protocol is used by NETCONF for structured network configuration management, commonly over SSH?",
+  "options": [
+   "NETCONF",
+   "ARP",
+   "STP",
+   "DHCP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "NETCONF provides structured configuration/management operations and is commonly transported over SSH.",
+  "multi": false
+ },
+ {
+  "id": 104,
+  "question": "Which Junos OS feature can help automate repetitive tasks using scripts?",
+  "options": [
+   "Junos automation and scripting capabilities",
+   "ARP cache",
+   "Ethernet FCS",
+   "VLAN tagging only"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Junos supports automation mechanisms such as event and commit scripts on supported platforms.",
+  "multi": false
+ },
+ {
+  "id": 105,
+  "question": "What is the purpose of an SNMP trap?",
+  "options": [
+   "Notify a management station about an event",
+   "Assign IP addresses",
+   "Create a BGP neighbor",
+   "Resolve IPv6 addresses"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Traps are asynchronous notifications from an agent to a manager.",
+  "multi": false
+ },
+ {
+  "id": 106,
+  "question": "Which tool is most directly used to test IP reachability with echo messages?",
+  "options": [
+   "ping",
+   "show chassis hardware",
+   "commit check",
+   "show configuration"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Ping sends ICMP Echo Requests and observes replies.",
+  "multi": false
+ },
+ {
+  "id": 107,
+  "question": "Which statement best describes a static route?",
+  "options": [
+   "A manually configured route",
+   "A route learned only by OSPF",
+   "A MAC learning entry",
+   "A DHCP lease"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Static routes are configured by an administrator rather than learned dynamically.",
+  "multi": false
+ },
+ {
+  "id": 108,
+  "question": "Which statement best describes a dynamic routing protocol?",
+  "options": [
+   "Routers exchange reachability information automatically",
+   "It only configures hostnames",
+   "It encrypts all Ethernet frames",
+   "It replaces ARP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Dynamic protocols exchange routing information and update routes as topology changes.",
+  "multi": false
+ },
+ {
+  "id": 109,
+  "question": "Which mechanism in Ethernet switching helps identify the port associated with a source MAC address?",
+  "options": [
+   "MAC address learning",
+   "OSPF SPF",
+   "DNS recursion",
+   "BGP communities"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Switches learn source MAC addresses from received frames and associate them with ports/VLANs.",
+  "multi": false
+ },
+ {
+  "id": 110,
+  "question": "What is the purpose of an IPv4 subnet broadcast address in a traditional subnet?",
+  "options": [
+   "Address packets to all hosts in that subnet",
+   "Identify one specific host only",
+   "Act as a DNS server",
+   "Represent a default gateway always"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The directed broadcast address has host bits all set to one, though forwarding is often restricted.",
+  "multi": false
+ },
+ {
+  "id": 111,
+  "question": "Which value is the IPv4 loopback network?",
+  "options": [
+   "127.0.0.0/8",
+   "169.254.0.0/16",
+   "224.0.0.0/4",
+   "192.0.2.0/24"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "127.0.0.0/8 is reserved for IPv4 loopback.",
+  "multi": false
+ },
+ {
+  "id": 112,
+  "question": "Which address range is IPv4 link-local/APIPA?",
+  "options": [
+   "169.254.0.0/16",
+   "127.0.0.0/8",
+   "10.0.0.0/8",
+   "224.0.0.0/4"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "IPv4 link-local addresses are in 169.254.0.0/16.",
+  "multi": false
+ },
+ {
+  "id": 113,
+  "question": "Which private IPv4 range is valid?",
+  "options": [
+   "10.0.0.0/8",
+   "8.8.8.0/24",
+   "1.1.1.0/24",
+   "224.0.0.0/4"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "10.0.0.0/8 is one of the RFC 1918 private IPv4 ranges.",
+  "multi": false
+ },
+ {
+  "id": 114,
+  "question": "What is the purpose of a default gateway on an IPv4 host?",
+  "options": [
+   "Forward traffic destined outside the local subnet",
+   "Resolve DNS names only",
+   "Assign a MAC address",
+   "Encrypt every frame"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Hosts send off-subnet traffic to a router/default gateway.",
+  "multi": false
+ },
+ {
+  "id": 115,
+  "question": "Which protocol provides error and diagnostic messages for IP, including ping?",
+  "options": [
+   "ICMP",
+   "FTP",
+   "RADIUS",
+   "BGP"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "ICMP carries control and diagnostic messages for IP.",
+  "multi": false
+ },
+ {
+  "id": 116,
+  "question": "What is the purpose of an IPv4 subnet mask?",
+  "options": [
+   "Identify network and host portions of an address",
+   "Encrypt an IP packet",
+   "Identify a TCP port",
+   "Provide DNS resolution"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The mask indicates which bits belong to the network prefix.",
+  "multi": false
+ },
+ {
+  "id": 117,
+  "question": "Which statement about a Junos `commit check` is correct?",
+  "options": [
+   "It validates candidate configuration but does not activate it",
+   "It always reboots the router",
+   "It clears all routes",
+   "It commits automatically"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "It checks configuration validity without activating changes.",
+  "multi": false
+ },
+ {
+  "id": 118,
+  "question": "Which two components best describe Junos control and forwarding architecture?",
+  "options": [
+   "Routing Engine",
+   "Packet Forwarding Engine",
+   "DNS resolver",
+   "DHCP relay"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "The Routing Engine handles control-plane functions; the PFE handles packet forwarding.",
+  "multi": true
+ },
+ {
+  "id": 119,
+  "question": "Which traffic is normally forwarded by the PFE without needing the Routing Engine to process every packet?",
+  "options": [
+   "Transit traffic",
+   "Every SSH session to the router",
+   "Every routing protocol packet destined to the RE",
+   "Console keystrokes"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Transit packets are forwarded using installed forwarding information.",
+  "multi": false
+ },
+ {
+  "id": 120,
+  "question": "Which Junos configuration mode is used to make configuration changes?",
+  "options": [
+   "Configuration mode",
+   "Monitor mode only",
+   "Shell mode only",
+   "Bootloader mode"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Enter configuration mode with `configure` before editing candidate configuration. JNCIA-Junos JN0-106 8 additional questions integrated from the uploaded practice material These questions were selected because their core concepts were not directly covered in the original 120-question bank. The uploaded source includes older JN0-105-era material and may contain errors; treat these as practice, not official or guaranteed exam questions.",
+  "multi": false
+ },
+ {
+  "id": 121,
+  "question": "Referring to a routing-table exhibit, what does the highlighted preference value 5 beside a static route indicate?",
+  "options": [
+   "Route preference",
+   "Hop count",
+   "Cost",
+   "Metric"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "In Junos, the value in square brackets after the route source is the route preference. Lower preference values are preferred.",
+  "multi": false
+ },
+ {
+  "id": 122,
+  "question": "Which two statements describe `configure exclusive`? (Choose two.)",
+  "options": [
+   "It retains uncommitted changes",
+   "It always discards uncommitted changes",
+   "It allows only one user to edit the shared configuration at a time",
+   "It allows up to 32 users to edit exclusively"
+  ],
+  "answer": [
+   0,
+   2
+  ],
+  "explanation": "`configure exclusive` locks the shared candidate configuration for one user. Existing uncommitted changes are not automatically discarded.",
+  "multi": true
+ },
+ {
+  "id": 123,
+  "question": "What is an advantage of Junos OS using separate software processes?",
+  "options": [
+   "Each process receives a fixed CPU allocation",
+   "Every dependency is mapped independently",
+   "Processes must be started manually",
+   "Each process runs in a protected memory space"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "Process separation and protected memory improve fault isolation and system stability.",
+  "multi": false
+ },
+ {
+  "id": 124,
+  "question": "If multiple archive sites are configured for configuration archival, what is the intended behavior?",
+  "options": [
+   "Sites are used round-robin",
+   "Junos attempts to transfer backups to each configured site",
+   "Junos randomly chooses one site",
+   "FTP is used only if SCP fails"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The supplied material says Junos attempts transfer to both listed sites. Confirm behavior for your platform and release in official documentation.",
+  "multi": false
+ },
+ {
+  "id": 125,
+  "question": "Which command saves the current active configuration as a rescue configuration?",
+  "options": [
+   "`load factory-default`",
+   "`request system reboot`",
+   "`request system zeroize`",
+   "`request system configuration rescue save`"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "A rescue configuration preserves a known-good configuration for recovery.",
+  "multi": false
+ },
+ {
+  "id": 126,
+  "question": "Which command displays continuously refreshed interface traffic statistics?",
+  "options": [
+   "`show interfaces extensive`",
+   "`monitor interface traffic`",
+   "`monitor traffic`",
+   "`show interfaces`"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "`monitor interface traffic` provides a continuously updating view of interface traffic statistics.",
+  "multi": false
+ },
+ {
+  "id": 127,
+  "question": "Which command displays the chassis serial number?",
+  "options": [
+   "`show chassis environment`",
+   "`show chassis hardware`",
+   "`show chassis routing-engine`",
+   "`show chassis location`"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "`show chassis hardware` displays hardware inventory details, including serial numbers.",
+  "multi": false
+ },
+ {
+  "id": 128,
+  "question": "What is decimal 7 in 8-bit binary notation?",
+  "options": [
+   "00001000",
+   "00010000",
+   "00000111",
+   "11100000"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "7 = 4 + 2 + 1, so the three least-significant bits are 111.",
+  "multi": false
+ }
+]
