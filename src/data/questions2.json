@@ -1,0 +1,3034 @@
+[
+ {
+  "id": 1,
+  "topic": "Commit",
+  "question": "Which command applies the candidate configuration to the active router configuration but automatically rolls back if not confirmed within a specific timeframe?",
+  "options": [
+   "commit at",
+   "commit check",
+   "commit confirmed",
+   "commit and-quit"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "commit confirmed applies the config and rolls back automatically unless confirmed.",
+  "multi": false
+ },
+ {
+  "id": 2,
+  "topic": "Commit",
+  "question": "What is the default rollback timer if you issue the commit confirmed command without specifying a time limit?",
+  "options": [
+   "5 minutes",
+   "10 minutes",
+   "15 minutes",
+   "30 minutes"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The default commit confirmed timer is 10 minutes.",
+  "multi": false
+ },
+ {
+  "id": 3,
+  "topic": "Commit",
+  "question": "You want to verify that a candidate configuration is syntactically correct without actually activating it. Which command should you use?",
+  "options": [
+   "commit check",
+   "commit validate",
+   "verify commit",
+   "test commit"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "commit check validates syntax and does not activate the configuration.",
+  "multi": false
+ },
+ {
+  "id": 4,
+  "topic": "Commit",
+  "question": "Which command activates the candidate configuration and immediately exits configuration mode?",
+  "options": [
+   "commit exit",
+   "commit quit",
+   "commit and-quit",
+   "commit save"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "commit and-quit commits and exits configuration mode.",
+  "multi": false
+ },
+ {
+  "id": 5,
+  "topic": "Commit",
+  "question": "A network administrator wants to schedule a configuration change to take effect at midnight. Which command achieves this?",
+  "options": [
+   "commit timer 00:00:00",
+   "commit at 00:00:00",
+   "commit schedule 00:00:00",
+   "commit delay 00:00:00"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "commit at <time> schedules a commit for a specific time.",
+  "multi": false
+ },
+ {
+  "id": 6,
+  "topic": "Commit",
+  "question": "What happens if a commit confirmed command is executed, but the administrator does not issue a second commit before the timer expires?",
+  "options": [
+   "The configuration is permanently saved.",
+   "The device reboots to the factory default configuration.",
+   "The configuration automatically rolls back to the previously active version.",
+   "The terminal session hangs until a manual input is received."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Without a second commit, the router rolls back to the previously active configuration.",
+  "multi": false
+ },
+ {
+  "id": 7,
+  "topic": "Commit",
+  "question": "Which command allows you to add an administrative comment or log note to the commit history for future troubleshooting?",
+  "options": [
+   "commit log \"message\"",
+   "commit comment \"message\"",
+   "commit remark \"message\"",
+   "commit note \"message\""
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "commit comment \"message\" adds a log message to the commit history.",
+  "multi": false
+ },
+ {
+  "id": 8,
+  "topic": "Commit",
+  "question": "If you have made changes to the candidate configuration and want to see what will change compared to the active configuration before committing, which command should you run?",
+  "options": [
+   "show compare",
+   "show differences",
+   "show configuration diff",
+   "show | compare"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "show | compare shows candidate vs. active differences.",
+  "multi": false
+ },
+ {
+  "id": 9,
+  "topic": "Commit",
+  "question": "When multiple administrators are working in configure exclusive mode, what happens when the administrator holding the lock issues the commit command?",
+  "options": [
+   "Only their specific changes are applied, leaving other changes in a pending state.",
+   "Their changes are applied, and the configuration lock is automatically released.",
+   "The active configuration is updated, but the exclusive lock is maintained until they type exit.",
+   "The system prompts other administrators to approve the commit."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "In configure exclusive mode the commit applies, but the lock stays until you exit configuration mode.",
+  "multi": false
+ },
+ {
+  "id": 10,
+  "topic": "Commit",
+  "question": "Which of the following statements is true regarding Junos OS configuration changes?",
+  "options": [
+   "Changes take effect immediately as soon as you press Enter on a command line.",
+   "Changes are saved to a temporary file and require a system reboot to activate.",
+   "Changes are made to a candidate configuration and require a commit command to take effect.",
+   "Changes must be verified by a secondary administrator before the commit command can be used."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Changes go to the candidate configuration and only take effect after commit.",
+  "multi": false
+ },
+ {
+  "id": 11,
+  "topic": "Operational & Configuration",
+  "question": "Which command allows you to transition from operational mode to configuration mode?",
+  "options": [
+   "configure",
+   "edit",
+   "exit",
+   "commit"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "The configure command enters configuration mode.",
+  "multi": false
+ },
+ {
+  "id": 12,
+  "topic": "Operational & Configuration",
+  "question": "What does the commit check command do?",
+  "options": [
+   "Saves the configuration and activates it immediately.",
+   "Validates the syntax of the candidate configuration without activating it.",
+   "Rolls back the active configuration to the previous version.",
+   "Compares the candidate configuration with the active configuration."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "commit check validates the candidate configuration without activating it.",
+  "multi": false
+ },
+ {
+  "id": 13,
+  "topic": "Operational & Configuration",
+  "question": "Which CLI keystroke combination clears the current command line?",
+  "options": [
+   "Ctrl + a",
+   "Ctrl + e",
+   "Ctrl + u",
+   "Ctrl + w"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Ctrl+u deletes the whole current command line.",
+  "multi": false
+ },
+ {
+  "id": 14,
+  "topic": "Operational & Configuration",
+  "question": "When using the Junos CLI, what does the pipe option | match <expression> do?",
+  "options": [
+   "Appends text to the current file.",
+   "Filters output to show only lines containing the specified expression.",
+   "Counts the number of occurrences of the expression.",
+   "Deletes all lines matching the expression."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "| match filters output to lines containing the expression.",
+  "multi": false
+ },
+ {
+  "id": 15,
+  "topic": "Operational & Configuration",
+  "question": "What is the default command prompt symbol for operational mode on a Junos device?",
+  "options": [
+   "#",
+   ">",
+   "$",
+   "%"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The operational mode prompt ends with >.",
+  "multi": false
+ },
+ {
+  "id": 16,
+  "topic": "Operational & Configuration",
+  "question": "Which command displays the current active software version running on a Junos device?",
+  "options": [
+   "show version",
+   "show system software",
+   "show interfaces terse",
+   "show hardware"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "show version displays the Junos software version.",
+  "multi": false
+ },
+ {
+  "id": 17,
+  "topic": "Operational & Configuration",
+  "question": "Where is the candidate configuration stored before a commit operation?",
+  "options": [
+   "In flash memory",
+   "In NVRAM",
+   "In temporary RAM",
+   "On a remote logging server"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The candidate configuration is a working copy held temporarily until it is committed.",
+  "multi": false
+ },
+ {
+  "id": 18,
+  "topic": "Operational & Configuration",
+  "question": "Which command allows you to view the differences between the candidate configuration and the active configuration?",
+  "options": [
+   "show configuration",
+   "show | compare",
+   "show differences",
+   "compare candidate active"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "show | compare displays differences between candidate and active configs.",
+  "multi": false
+ },
+ {
+  "id": 19,
+  "topic": "Operational & Configuration",
+  "question": "How many rescue configurations can be saved on a Junos device at any one time?",
+  "options": [
+   "1",
+   "5",
+   "49",
+   "Unlimited"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Only one rescue configuration can be saved at a time.",
+  "multi": false
+ },
+ {
+  "id": 20,
+  "topic": "Operational & Configuration",
+  "question": "Which command discards all uncommitted changes made to the candidate configuration?",
+  "options": [
+   "rollback 0",
+   "clear configuration",
+   "abort",
+   "delete"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "rollback 0 replaces the candidate with the active configuration, discarding uncommitted changes.",
+  "multi": false
+ },
+ {
+  "id": 21,
+  "topic": "Operational & Configuration",
+  "question": "What happens if you execute the commit confirmed command but do not follow it up with a second commit?",
+  "options": [
+   "The changes remain active permanently.",
+   "The device automatically reboots immediately.",
+   "The configuration automatically rolls back to the previous version after 10 minutes by default.",
+   "The CLI locks all further configuration changes until manually cleared."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The default rollback time for commit confirmed is 10 minutes.",
+  "multi": false
+ },
+ {
+  "id": 22,
+  "topic": "Operational & Configuration",
+  "question": "Which command is used to load a factory-default configuration on a Junos device?",
+  "options": [
+   "load factory-default",
+   "rollback 49",
+   "request system zeroize",
+   "set factory-default"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "load factory-default loads the factory-default configuration into the candidate.",
+  "multi": false
+ },
+ {
+  "id": 23,
+  "topic": "Operational & Configuration",
+  "question": "In Junos interface naming conventions (e.g., ge-0/1/2), what does the second number (1) represent?",
+  "options": [
+   "Slot number",
+   "Port number",
+   "FPC number",
+   "PIC number"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "In type-fpc/pic/port, the second number is the PIC number.",
+  "multi": false
+ },
+ {
+  "id": 24,
+  "topic": "Operational & Configuration",
+  "question": "Under which configuration hierarchy would you configure an IP address for a physical Ethernet interface?",
+  "options": [
+   "[edit interfaces ge-0/0/0 unit 0 family inet]",
+   "[edit interfaces ge-0/0/0 family ip]",
+   "[edit protocols routing-options]",
+   "[edit system interfaces]"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "IPv4 addresses are set under unit 0 family inet of the interface.",
+  "multi": false
+ },
+ {
+  "id": 25,
+  "topic": "Operational & Configuration",
+  "question": "Which command displays a concise, single-line overview of all device interfaces, including their administrative and operational status?",
+  "options": [
+   "show interfaces details",
+   "show interfaces terse",
+   "show interfaces status",
+   "show configuration interfaces"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "show interfaces terse gives a concise per-interface status overview.",
+  "multi": false
+ },
+ {
+  "id": 26,
+  "topic": "Operational & Configuration",
+  "question": "Which interface type is used as a loopback interface in Junos?",
+  "options": [
+   "fxp0",
+   "me0",
+   "lo0",
+   "ae0"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "lo0 is the loopback interface.",
+  "multi": false
+ },
+ {
+  "id": 27,
+  "topic": "Operational & Configuration",
+  "question": "What is the default route preference (administrative distance) for a static route in Junos OS?",
+  "options": [
+   "1",
+   "5",
+   "10",
+   "15"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The default static route preference is 5.",
+  "multi": false
+ },
+ {
+  "id": 28,
+  "topic": "Operational & Configuration",
+  "question": "Which statement is a mandatory component of a user-defined routing policy term?",
+  "options": [
+   "then",
+   "from",
+   "to",
+   "metric"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "A policy term needs a then action (from is optional).",
+  "multi": false
+ },
+ {
+  "id": 29,
+  "topic": "Operational & Configuration",
+  "question": "What is the default action of the Junos import policy for BGP?",
+  "options": [
+   "Reject all BGP routes.",
+   "Accept all BGP routes.",
+   "Accept only internal BGP routes.",
+   "Reject routes without a valid AS-Path."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "BGP's default import policy accepts all BGP routes.",
+  "multi": false
+ },
+ {
+  "id": 30,
+  "topic": "Operational & Configuration",
+  "question": "Which table stores all active IPv4 unicast routing information in Junos?",
+  "options": [
+   "inet.0",
+   "inet6.0",
+   "mpls.0",
+   "bgp.0"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "inet.0 is the IPv4 unicast routing table.",
+  "multi": false
+ },
+ {
+  "id": 31,
+  "topic": "Operational & Configuration",
+  "question": "Which command is used to safely power down a Junos device?",
+  "options": [
+   "request system power-off",
+   "halt",
+   "stop system",
+   "request system reboot"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "request system power-off safely shuts down and powers off the device.",
+  "multi": false
+ },
+ {
+  "id": 32,
+  "topic": "Operational & Configuration",
+  "question": "Which utility is used to verify end-to-end network connectivity by sending ICMP echo requests?",
+  "options": [
+   "traceroute",
+   "ping",
+   "monitor traffic",
+   "ssh"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "ping sends ICMP echo requests to verify connectivity.",
+  "multi": false
+ },
+ {
+  "id": 33,
+  "topic": "Operational & Configuration",
+  "question": "Under which hierarchy are system logging (syslog) destinations and facilities configured?",
+  "options": [
+   "[edit system syslog]",
+   "[edit protocols logging]",
+   "[edit interfaces fxp0]",
+   "[edit security log]"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Syslog is configured under [edit system syslog].",
+  "multi": false
+ },
+ {
+  "id": 34,
+  "topic": "Operational & Configuration",
+  "question": "Which command is used to monitor interface traffic in real-time within the Junos CLI?",
+  "options": [
+   "show interfaces statistics",
+   "monitor interface ge-0/0/0",
+   "tcpdump interface ge-0/0/0",
+   "watch interfaces"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "monitor interface <name> shows live interface statistics.",
+  "multi": false
+ },
+ {
+  "id": 35,
+  "topic": "Operational & Configuration",
+  "question": "If you need to view the history of all configuration commits, which command should you run?",
+  "options": [
+   "show system commits",
+   "show configuration history",
+   "show system boot-messages",
+   "show version history"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "show system commit lists the commit history (closest option here).",
+  "multi": false
+ },
+ {
+  "id": 36,
+  "topic": "Policy & Firewall",
+  "question": "In a Junos device, what is the primary purpose of import routing policies?",
+  "options": [
+   "To control which routes are advertised from the local routing table to neighboring routers",
+   "To control which routes received from external protocols are accepted into the Routing Information Base (RIB)",
+   "To rewrite the source IP addresses of transit packets passing through the Packet Forwarding Engine",
+   "To filter Layer 2 Ethernet broadcast frames on a physical interface"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Import policies control which received routes are accepted into the routing table.",
+  "multi": false
+ },
+ {
+  "id": 37,
+  "topic": "Policy & Firewall",
+  "question": "How can a routing policy affect the routing table (RIB) in a Junos device?",
+  "options": [
+   "By modifying packet payload contents before serialization",
+   "By accepting, rejecting, or altering route attributes (such as local preference or metric) for routes entering or leaving the routing table",
+   "By converting IPv4 static routes directly into Layer 2 MAC table entries",
+   "By disabling the Routing Engine during high-utilization events"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Policies accept, reject, or modify routes entering or leaving the routing table.",
+  "multi": false
+ },
+ {
+  "id": 38,
+  "topic": "Policy & Firewall",
+  "question": "What is the default action of a Junos routing policy if a route does not match any term inside the policy?",
+  "options": [
+   "Accept",
+   "Reject",
+   "Drop and send an ICMP unreachable message",
+   "Pass to the next routing policy without evaluation"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "If no term matches, evaluation moves to the next policy in the chain, then the protocol default policy.",
+  "multi": false
+ },
+ {
+  "id": 39,
+  "topic": "Policy & Firewall",
+  "question": "When multiple active routes to the same destination prefix are learned via different protocols, how does Junos determine the active route by default?",
+  "options": [
+   "By choosing the protocol with the highest route preference (administrative distance) value",
+   "By choosing the protocol with the lowest route preference (administrative distance) numerical value",
+   "By randomly balancing traffic across all available paths",
+   "By prioritizing BGP over all other local and direct routes automatically"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The route with the lowest preference value becomes active.",
+  "multi": false
+ },
+ {
+  "id": 40,
+  "topic": "Policy & Firewall",
+  "question": "Which of the following default route preference values is the lowest (most preferred) in a standard Junos OS configuration?",
+  "options": [
+   "BGP (170)",
+   "OSPF Internal (10)",
+   "Static (5)",
+   "Direct (0)"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "Direct routes have preference 0, the lowest of the listed values.",
+  "multi": false
+ },
+ {
+  "id": 41,
+  "topic": "Policy & Firewall",
+  "question": "What is the difference between a Junos routing policy and a firewall filter?",
+  "options": [
+   "Routing policies control the flow and attributes of routes between the routing tables and routing protocols, whereas firewall filters evaluate and control transit or exception packet flows on interfaces.",
+   "Routing policies run exclusively on the Packet Forwarding Engine (PFE), while firewall filters run only on the Routing Engine (RE).",
+   "Firewall filters change the route preference of OSPF routes, whereas routing policies drop TCP SYN flood packets.",
+   "There is no functional difference; both terms refer to the exact same Junos configuration stanza."
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Routing policies act on routes; firewall filters act on packets.",
+  "multi": false
+ },
+ {
+  "id": 42,
+  "topic": "Policy & Firewall",
+  "question": "In a Junos routing policy term, what happens if a from statement matches a route and the then statement specifies accept?",
+  "options": [
+   "The route is immediately discarded from memory.",
+   "Evaluation of the policy stops, and the route is accepted.",
+   "The router reboots the Routing Engine to apply the change.",
+   "The route is sent back to the sender with a reject flag."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "accept ends policy evaluation and the route is accepted.",
+  "multi": false
+ },
+ {
+  "id": 43,
+  "topic": "Policy & Firewall",
+  "question": "Which CLI hierarchy is used to configure routing policies in Junos OS?",
+  "options": [
+   "set firewall family inet filter ...",
+   "set policy-options policy-statement ...",
+   "set routing-options rib-group ...",
+   "set system services routing-policy ..."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Routing policies are configured under policy-options policy-statement.",
+  "multi": false
+ },
+ {
+  "id": 44,
+  "topic": "Policy & Firewall",
+  "question": "What does an export routing policy accomplish on a Juniper router?",
+  "options": [
+   "It defines which routes from the local routing tables are advertised out to neighboring routers or peers.",
+   "It blocks all inbound Telnet and SSH management sessions.",
+   "It translates private IPv4 addresses to public IPv4 addresses using NAT.",
+   "It forces the Packet Forwarding Engine to drop all BGP keepalives."
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Export policies control which routes are advertised to neighbors.",
+  "multi": false
+ },
+ {
+  "id": 45,
+  "topic": "Policy & Firewall",
+  "question": "In a Junos routing policy, can a single policy-statement contain multiple term blocks?",
+  "options": [
+   "No, each policy statement is strictly limited to one term and one action.",
+   "Yes, terms are evaluated sequentially from top to bottom until a match and action occur.",
+   "Yes, but all terms are processed simultaneously in random order.",
+   "No, multiple terms require separate policy-statement names linked via external script files."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A policy-statement can have several terms evaluated top to bottom.",
+  "multi": false
+ },
+ {
+  "id": 46,
+  "topic": "Policy & Firewall",
+  "question": "In a Junos firewall filter, what is the order of evaluation for terms within the filter?",
+  "options": [
+   "Random order",
+   "From top to bottom as written",
+   "From bottom to top as written",
+   "Based on action priority"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Firewall filter terms are evaluated top to bottom.",
+  "multi": false
+ },
+ {
+  "id": 47,
+  "topic": "Policy & Firewall",
+  "question": "What happens to a packet that does not match any explicit term in a Junos firewall filter?",
+  "options": [
+   "It is accepted by default",
+   "It is discarded by an implicit \"then discard\" at the end of the filter",
+   "It is sent to the Routing Engine for inspection",
+   "It triggers an ICMP unreachable message and loops"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Packets matching no term are discarded by an implicit discard.",
+  "multi": false
+ },
+ {
+  "id": 48,
+  "topic": "Policy & Firewall",
+  "question": "Which command is used to apply a firewall filter named block-ssh to the input of interface ge-0/0/0?",
+  "options": [
+   "set firewall filter block-ssh interface ge-0/0/0 input",
+   "set interfaces ge-0/0/0 family inet filter input block-ssh",
+   "set apply-groups firewall filter block-ssh ge-0/0/0",
+   "set system firewall-filter ge-0/0/0 input block-ssh"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Apply under interface unit family inet filter input <name>.",
+  "multi": false
+ },
+ {
+  "id": 49,
+  "topic": "Policy & Firewall",
+  "question": "Where are Junos firewall filters for transit traffic processed and evaluated on a Juniper router?",
+  "options": [
+   "Routing Engine (RE)",
+   "Packet Forwarding Engine (PFE)",
+   "Local Management Module (LMM)",
+   "Switching Control Board (SCB)"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Transit-traffic filters are applied by the PFE.",
+  "multi": false
+ },
+ {
+  "id": 50,
+  "topic": "Policy & Firewall",
+  "question": "In a Junos firewall filter term, which statement is used to define the action taken when a packet matches the specified criteria?",
+  "options": [
+   "action",
+   "then",
+   "do",
+   "outcome"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The then statement defines the action.",
+  "multi": false
+ },
+ {
+  "id": 51,
+  "topic": "Policy & Firewall",
+  "question": "Which of the following match conditions can be specified under the from statement of a firewall filter term for IPv4 traffic?",
+  "options": [
+   "Source MAC address and VLAN ID",
+   "Source/destination IP address, protocol, and port",
+   "CPU utilization and memory threshold",
+   "BGP autonomous system path length"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Filters can match on source/destination address, protocol, and ports.",
+  "multi": false
+ },
+ {
+  "id": 52,
+  "topic": "Policy & Firewall",
+  "question": "What is the function of the accept and discard actions in a Junos firewall filter?",
+  "options": [
+   "accept forwards or processes the packet, while discard silently drops the packet",
+   "accept logs the packet to a syslog server, while discard returns it to the sender",
+   "accept sends the packet to the Routing Engine, while discard sends it to the Packet Forwarding Engine",
+   "Both actions drop the packet, but accept generates an SNMP trap"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "accept permits the packet; discard drops it silently.",
+  "multi": false
+ },
+ {
+  "id": 53,
+  "topic": "Policy & Firewall",
+  "question": "Which feature allows a Junos firewall filter to verify whether the source address of an incoming packet is reachable via the same interface it arrived on?",
+  "options": [
+   "Proxy ARP",
+   "Unicast Reverse Path Forwarding (uRPF)",
+   "Network Address Translation (NAT)",
+   "Directed Broadcast Filtering"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "uRPF checks that the source is reachable via the arriving interface.",
+  "multi": false
+ },
+ {
+  "id": 54,
+  "topic": "Policy & Firewall",
+  "question": "What is the primary difference between a Junos routing policy and a Junos firewall filter?",
+  "options": [
+   "Routing policies affect active data-plane packets, while firewall filters affect control-plane routing table entries",
+   "Routing policies control the content and acceptance/advertising of routes in the routing table, while firewall filters control data-plane transit packets",
+   "Routing policies can only be applied to loopback interfaces, while firewall filters can only be applied to physical trunk ports",
+   "There is no functional difference; they use identical syntax and target the same objects"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Policies handle route information; filters handle data-plane packets.",
+  "multi": false
+ },
+ {
+  "id": 55,
+  "topic": "Policy & Firewall",
+  "question": "If a firewall filter term contains both a from statement with multiple match conditions and a then statement, how are multiple match conditions within the same from line evaluated?",
+  "options": [
+   "Logical OR (any condition can match)",
+   "Logical AND (all conditions must match)",
+   "Logical XOR (only one condition must match)",
+   "Sequential round-robin evaluation"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Multiple conditions in a from clause are ANDed.",
+  "multi": false
+ },
+ {
+  "id": 56,
+  "topic": "RE & PFE",
+  "question": "Which two statements are true regarding the Routing Engine (RE)? (Choose two.)",
+  "options": [
+   "It processes and forwards all transit data traffic.",
+   "It processes local management traffic, including SSH and CLI sessions.",
+   "It maintains the master routing tables.",
+   "It directly updates interface counters and controls the physical LEDs."
+  ],
+  "answer": [
+   1,
+   2
+  ],
+  "explanation": "The RE handles local management traffic and maintains the master routing tables; transit forwarding is the PFE.",
+  "multi": true
+ },
+ {
+  "id": 57,
+  "topic": "RE & PFE",
+  "question": "How are the Routing Engine (RE) and the Packet Forwarding Engine (PFE) physically or logically connected within a Junos device?",
+  "options": [
+   "They use shared memory buffers on a unified system board.",
+   "They communicate over an internal high-speed Ethernet link.",
+   "They rely on external breakout cables.",
+   "They utilize a specialized internal MPLS connection block."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The RE and PFE communicate over an internal Ethernet link.",
+  "multi": false
+ },
+ {
+  "id": 58,
+  "topic": "RE & PFE",
+  "question": "Which type of traffic is sent directly to the Routing Engine for processing?",
+  "options": [
+   "Transit data packets forwarded across different subnets.",
+   "Exception traffic, such as OSPF protocol updates and local SSH sessions.",
+   "Layer 2 frames traversing a bridged interface.",
+   "Multicast video streams passing through the device."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Exception traffic such as OSPF updates and local SSH goes to the RE.",
+  "multi": false
+ },
+ {
+  "id": 59,
+  "topic": "RE & PFE",
+  "question": "Which component of the Junos architecture is responsible for path selection and running daemons like rpd (Routing Protocol Daemon)?",
+  "options": [
+   "Packet Forwarding Engine (PFE)",
+   "ASIC/Chassis Management Module",
+   "Routing Engine (RE)",
+   "Forwarding Information Base (FIB)"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The Routing Engine runs rpd and does path selection.",
+  "multi": false
+ },
+ {
+  "id": 60,
+  "topic": "RE & PFE",
+  "question": "Which table is built and maintained directly by the Routing Engine before being pushed downstream?",
+  "options": [
+   "Forwarding Table (FIB)",
+   "MAC Address Table",
+   "Routing Table (RIB)",
+   "ARP Cache"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The RE builds the routing table (RIB) and pushes the forwarding table to the PFE.",
+  "multi": false
+ },
+ {
+  "id": 61,
+  "topic": "RE & PFE",
+  "question": "What is a primary benefit of the separation between the Control Plane (RE) and the Data Plane (PFE) in Junos OS?",
+  "options": [
+   "It completely eliminates the need to configure loopback interfaces.",
+   "High transit traffic loads will not degrade the performance of device management tasks.",
+   "It permits routing protocols to bypass the master routing table entirely.",
+   "It enables multiple independent user accounts to share a single login class simultaneously."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Separating control and data planes keeps transit load from affecting management.",
+  "multi": false
+ },
+ {
+  "id": 62,
+  "topic": "RE & PFE",
+  "question": "Which Junos OS daemon runs on the Routing Engine and handles user configuration requests along with commit operations?",
+  "options": [
+   "rpd (Routing Protocol Daemon)",
+   "chassisd (Chassis Daemon)",
+   "mgd (Management Daemon)",
+   "dcd (Device Control Daemon)"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "mgd handles user configuration requests and commits.",
+  "multi": false
+ },
+ {
+  "id": 63,
+  "topic": "RE & PFE",
+  "question": "Which two functions are performed by the Packet Forwarding Engine (PFE)? (Choose two.)",
+  "options": [
+   "It selects the active route from the routing table.",
+   "It implements firewall filters.",
+   "It maintains the master routing table.",
+   "It forwards transit traffic."
+  ],
+  "answer": [
+   1,
+   3
+  ],
+  "explanation": "The PFE implements firewall filters and forwards transit traffic.",
+  "multi": true
+ },
+ {
+  "id": 64,
+  "topic": "RE & PFE",
+  "question": "How do the Routing Engine (RE) and the Packet Forwarding Engine (PFE) communicate?",
+  "options": [
+   "They share memory access directly.",
+   "They connect via an internal Ethernet link.",
+   "They utilize external breakout cables.",
+   "They communicate using an MPLS connection."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "They connect through an internal Ethernet link.",
+  "multi": false
+ },
+ {
+  "id": 65,
+  "topic": "RE & PFE",
+  "question": "Which component is responsible for the actual high-speed forwarding of transit data packets through a Junos device?",
+  "options": [
+   "The Routing Engine",
+   "The Management Daemon (MGD)",
+   "The Packet Forwarding Engine",
+   "The Device Control Daemon (DCD)"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The PFE does high-speed forwarding of transit packets.",
+  "multi": false
+ },
+ {
+  "id": 66,
+  "topic": "RE & PFE",
+  "question": "Which of the following describes the behavior of the PFE when it encounters \"exception traffic\"?",
+  "options": [
+   "The PFE drops the traffic immediately without exception.",
+   "The PFE processes the traffic locally using ASICs.",
+   "The PFE sends the traffic to the Routing Engine for processing.",
+   "The PFE mirrors the traffic out all active network interfaces."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Exception traffic is sent to the RE for processing.",
+  "multi": false
+ },
+ {
+  "id": 67,
+  "topic": "RE & PFE",
+  "question": "Which structure does the Packet Forwarding Engine use to make high-speed forwarding decisions?",
+  "options": [
+   "Routing Information Base (RIB)",
+   "Forwarding Information Base (FIB)",
+   "Command Line Interface (CLI) configuration file",
+   "The candidate configuration database"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The PFE forwards using the Forwarding Information Base.",
+  "multi": false
+ },
+ {
+  "id": 68,
+  "topic": "RE & PFE",
+  "question": "Which type of traffic does not require the control plane/Routing Engine intervention and is handled entirely by the PFE?",
+  "options": [
+   "SSH traffic destined for the router",
+   "Transit traffic traversing the router",
+   "OSPF protocol updates",
+   "SNMP monitoring requests"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Transit traffic is handled entirely by the PFE.",
+  "multi": false
+ },
+ {
+  "id": 69,
+  "topic": "RE & PFE",
+  "question": "Where are Class of Service (CoS) functions like classification, queuing, and scheduling physically executed on a Junos device?",
+  "options": [
+   "Within the Junos OS kernel on the RE",
+   "On the flash storage module",
+   "Inside the Management Daemon (MGD)",
+   "On the Packet Forwarding Engine (PFE) ASICs"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "CoS classification, queuing, and scheduling run on the PFE ASICs.",
+  "multi": false
+ },
+ {
+  "id": 70,
+  "topic": "RE & PFE",
+  "question": "When a network engineer configures a firewall filter to drop transit packets matching a specific source IP, which component evaluates and applies this policy to line-rate traffic?",
+  "options": [
+   "The Routing Engine",
+   "The Packet Forwarding Engine",
+   "The Chassis Daemon",
+   "The Routing Protocol Daemon (RPD)"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The PFE applies firewall filters to transit traffic at line rate.",
+  "multi": false
+ },
+ {
+  "id": 71,
+  "topic": "Rollback & Maintenance",
+  "question": "Which command allows you to revert the candidate configuration to the currently active configuration?",
+  "options": [
+   "rollback 0",
+   "rollback 1",
+   "rollback active",
+   "rollback rescue"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "rollback 0 reverts the candidate to the active configuration.",
+  "multi": false
+ },
+ {
+  "id": 72,
+  "topic": "Rollback & Maintenance",
+  "question": "By default, how many previous configurations does the Junos OS save for rollback purposes?",
+  "options": [
+   "5",
+   "10",
+   "49",
+   "50"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Junos stores 49 previous configurations (rollback 1-49) plus the active one.",
+  "multi": false
+ },
+ {
+  "id": 73,
+  "topic": "Rollback & Maintenance",
+  "question": "What is the correct syntax to save the current running configuration as the rescue configuration?",
+  "options": [
+   "commit rescue",
+   "request system configuration rescue save",
+   "save rescue-configuration",
+   "rollback rescue save"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "request system configuration rescue save saves the rescue configuration.",
+  "multi": false
+ },
+ {
+  "id": 74,
+  "topic": "Rollback & Maintenance",
+  "question": "A network administrator wants to preview the differences between the current candidate configuration and the previously committed configuration (rollback 1). Which command should be used?",
+  "options": [
+   "show configuration | compare",
+   "show system rollback 1",
+   "show configuration | compare rollback 1",
+   "compare rollback 1"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "show configuration | compare rollback 1 compares against the previous commit.",
+  "multi": false
+ },
+ {
+  "id": 75,
+  "topic": "Rollback & Maintenance",
+  "question": "Which directory natively stores the archived Junos OS configuration files on a device?",
+  "options": [
+   "/var/home/",
+   "/config/",
+   "/var/db/config/",
+   "/etc/config/"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Archived configuration files are in /var/db/config/.",
+  "multi": false
+ },
+ {
+  "id": 76,
+  "topic": "Rollback & Maintenance",
+  "question": "What happens if you execute the rollback rescue command in configuration mode?",
+  "options": [
+   "The rescue configuration is immediately committed and becomes active.",
+   "The rescue configuration is loaded into the candidate configuration but not yet committed.",
+   "The system reboots using the rescue software image.",
+   "The system factory-resets all interfaces."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "rollback rescue loads the rescue config into the candidate; a commit is still required.",
+  "multi": false
+ },
+ {
+  "id": 77,
+  "topic": "Rollback & Maintenance",
+  "question": "Which command is used to load a specific configuration file from a remote server into the candidate configuration?",
+  "options": [
+   "load set ftp://...",
+   "request system software add ftp://...",
+   "load replace ftp://...",
+   "copy ftp://... candidate"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "load replace <url> loads a configuration file from a remote server into the candidate.",
+  "multi": false
+ },
+ {
+  "id": 78,
+  "topic": "Rollback & Maintenance",
+  "question": "You have made multiple changes to the candidate configuration and want to completely clear them without committing. Which command accomplishes this?",
+  "options": [
+   "clear configuration",
+   "rollback 0",
+   "abort",
+   "exit discard"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "rollback 0 discards all uncommitted candidate changes (exit discard also does this).",
+  "multi": false
+ },
+ {
+  "id": 79,
+  "topic": "Rollback & Maintenance",
+  "question": "Which command should you execute to cleanly shut down the Junos OS before powering off the hardware?",
+  "options": [
+   "request system power-off",
+   "halt",
+   "request system halt",
+   "reboot system halt"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "request system halt cleanly shuts down Junos OS.",
+  "multi": false
+ },
+ {
+  "id": 80,
+  "topic": "Rollback & Maintenance",
+  "question": "What is the primary purpose of the commit confirmed command during a maintenance window?",
+  "options": [
+   "It verifies the syntax of the configuration without activating it.",
+   "It automatically rolls back the configuration if the administrator does not confirm it within a set timeframe.",
+   "It saves the configuration to an external USB drive automatically.",
+   "It forces all logged-in administrators to approve the configuration change."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "commit confirmed rolls back automatically if not confirmed in time.",
+  "multi": false
+ },
+ {
+  "id": 81,
+  "topic": "Route Preference",
+  "question": "A Junos router receives two identical routes to the same destination: one via OSPF internal and one via BGP. By default, which route will be selected as active in the routing table?",
+  "options": [
+   "The BGP route, because it has a lower preference value.",
+   "The OSPF route, because it has a lower preference value.",
+   "The BGP route, because it has a higher preference value.",
+   "The OSPF route, because it has a higher preference value."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "OSPF internal (10) beats BGP (170) because lower preference wins.",
+  "multi": false
+ },
+ {
+  "id": 82,
+  "topic": "Route Preference",
+  "question": "Which of the following represents the correct default Junos protocol preference value for Static routes?",
+  "options": [
+   "0",
+   "5",
+   "10",
+   "15"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Static routes default to preference 5.",
+  "multi": false
+ },
+ {
+  "id": 83,
+  "topic": "Route Preference",
+  "question": "In Junos OS, what is the default protocol preference value for an external BGP (eBGP) route?",
+  "options": [
+   "170",
+   "150",
+   "20",
+   "100"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "eBGP and iBGP default to preference 170.",
+  "multi": false
+ },
+ {
+  "id": 84,
+  "topic": "Route Preference",
+  "question": "If a network engineer transitions from Cisco IOS to Junos OS, which concept maps directly to Cisco's Administrative Distance (AD)?",
+  "options": [
+   "Route metric",
+   "Protocol preference",
+   "Next-hop priority",
+   "AS Path length"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Junos route preference corresponds to Cisco administrative distance.",
+  "multi": false
+ },
+ {
+  "id": 85,
+  "topic": "Route Preference",
+  "question": "A Junos routing table contains a Direct route and an OSPF Internal route to the exact same destination prefix. Which statement correctly describes the outcome?",
+  "options": [
+   "OSPF is preferred because its default preference is 10.",
+   "Both routes are placed in the forwarding table to share load.",
+   "The Direct route is preferred because its default preference is 0.",
+   "The router will drop packets because of a preference conflict."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Direct has preference 0, which beats OSPF internal (10).",
+  "multi": false
+ },
+ {
+  "id": 86,
+  "topic": "Route Preference",
+  "question": "Which default Junos protocol preference value is correctly matched with its routing protocol?",
+  "options": [
+   "OSPF ASE (External) — 150",
+   "RIP — 100",
+   "iBGP — 200",
+   "IS-IS Level 1 Internal — 18"
+  ],
+  "answer": [
+   0,
+   1
+  ],
+  "explanation": "OSPF external is 150 and RIP is 100. iBGP is 170 and IS-IS L1 internal is 15, so C and D are wrong.",
+  "multi": true
+ },
+ {
+  "id": 87,
+  "topic": "Route Preference",
+  "question": "When the Junos OS evaluates multiple routes to the same destination to determine the active path, what is the very first attribute it compares?",
+  "options": [
+   "Metric",
+   "Protocol Preference",
+   "AS Path",
+   "Route Selection Tie-breaker"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Route preference is compared first.",
+  "multi": false
+ },
+ {
+  "id": 88,
+  "topic": "Route Preference",
+  "question": "You need to configure a backup static route that should only be used if the primary OSPF internal route fails. Which preference value should you assign to this static route?",
+  "options": [
+   "5",
+   "9",
+   "10",
+   "15"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "The backup static must be higher than OSPF internal (10); 15 works, 5 and 9 would win.",
+  "multi": false
+ },
+ {
+  "id": 89,
+  "topic": "Route Preference",
+  "question": "Which of the following protocol preference values would Junos OS assign to an Internal IS-IS route by default?",
+  "options": [
+   "10",
+   "15",
+   "18",
+   "160"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "IS-IS Level 1 internal is 15 (Level 2 internal is 18).",
+  "multi": false
+ },
+ {
+  "id": 90,
+  "topic": "Route Preference",
+  "question": "Why might a network administrator manually modify a routing protocol's preference value in Junos OS?",
+  "options": [
+   "To increase the link speed of an interface.",
+   "To manipulate path selection when identical routes are learned from different protocols.",
+   "To force the router to clear its active forwarding table.",
+   "To enable equal-cost multipath (ECMP) load balancing automatically."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Changing preference controls which protocol's route is chosen for the same prefix.",
+  "multi": false
+ },
+ {
+  "id": 91,
+  "topic": "Static Routes",
+  "question": "Which next-hop attribute is required when configuring a static route to an IPv4 destination in Junos OS?",
+  "options": [
+   "The MAC address of the next-hop router",
+   "An IP address or an egress interface name",
+   "The autonomous system (AS) number of the target network",
+   "The loopback interface IP of the local router"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A static route needs a next-hop IP address or an exit interface.",
+  "multi": false
+ },
+ {
+  "id": 92,
+  "topic": "Static Routes",
+  "question": "By default, what is the default protocol preference value for a static route in Junos OS?",
+  "options": [
+   "0",
+   "1",
+   "5",
+   "15"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The default static route preference is 5.",
+  "multi": false
+ },
+ {
+  "id": 93,
+  "topic": "Static Routes",
+  "question": "If you configure a static route with a next-hop IP address that is not directly connected or reachable in the routing table, what status will the route have?",
+  "options": [
+   "Active and installed in the forwarding table",
+   "Hidden",
+   "Reject",
+   "Inactive (not installed in the forwarding table)"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A route with an unresolvable next hop is unusable and goes into the hidden state.",
+  "multi": false
+ },
+ {
+  "id": 94,
+  "topic": "Static Routes",
+  "question": "Which command correctly configures a static route to the network 192.168.10.0/24 with a next-hop of 10.1.1.1?",
+  "options": [
+   "set routing-options static route 192.168.10.0/24 next-hop 10.1.1.1",
+   "set protocols static route 192.168.10.0/24 next-hop 10.1.1.1",
+   "set interfaces ge-0/0/0 unit 0 static route 192.168.10.0/24 next-hop 10.1.1.1",
+   "set routing-instances static route 192.168.10.0/24 gateway 10.1.1.1"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Static routes are configured under routing-options static.",
+  "multi": false
+ },
+ {
+  "id": 95,
+  "topic": "Static Routes",
+  "question": "What happens when a static route is configured with the discard option as its next-hop modifier?",
+  "options": [
+   "Traffic matching the route is dropped silently without sending an ICMP unreachable message.",
+   "Traffic matching the route is dropped and an ICMP host unreachable message is returned to the sender.",
+   "The router forwards the traffic to the management interface.",
+   "The route is automatically disabled if the primary interface goes down."
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "discard silently drops matching traffic with no ICMP message.",
+  "multi": false
+ },
+ {
+  "id": 96,
+  "topic": "Static Routes",
+  "question": "What happens when a static route is configured with the reject option as its next-hop modifier?",
+  "options": [
+   "Traffic matching the route is dropped silently.",
+   "Traffic matching the route is dropped and an ICMP unreachable message is sent back to the source.",
+   "The traffic is redirected to the backup next-hop automatically.",
+   "The router logs a critical system alarm and reboots the interface."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "reject drops traffic and sends an ICMP unreachable.",
+  "multi": false
+ },
+ {
+  "id": 97,
+  "topic": "Static Routes",
+  "question": "How can you configure a backup static route (floating static route) that only becomes active if the primary routing protocol route (e.g., OSPF) fails?",
+  "options": [
+   "Set a lower metric on the static route.",
+   "Set the static route preference to a value higher than the primary protocol's preference.",
+   "Configure the static route inside the OSPF protocol hierarchy.",
+   "Enable the qualified-next-hop option without changing the preference."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A floating static uses a preference higher than the primary protocol's.",
+  "multi": false
+ },
+ {
+  "id": 98,
+  "topic": "Static Routes",
+  "question": "In Junos OS, static routes are globally defined under which configuration hierarchy?",
+  "options": [
+   "[edit protocols static]",
+   "[edit routing-options]",
+   "[edit interfaces]",
+   "[edit routing-control]"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Static routes live under [edit routing-options].",
+  "multi": false
+ },
+ {
+  "id": 99,
+  "topic": "Static Routes",
+  "question": "What is the behavior of the route to 172.16.1.0/24 based on this configuration?",
+  "options": [
+   "Traffic will be load-balanced equally between 10.0.0.1 and 192.168.1.1.",
+   "192.168.1.1 is the primary next-hop because it has a preference of 50.",
+   "10.0.0.1 is the primary next-hop because it inherits the default static route preference of 5, which is preferred over 50.",
+   "Both next-hops are rejected because they belong to different subnets."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Primary next hop keeps the default static preference of 5; the qualified next hop (50) is the backup.",
+  "multi": false,
+  "intro": "Consider the following configuration:",
+  "code": "[edit routing-options static]\nroute 172.16.1.0/24 {\nnext-hop 10.0.0.1;\nqualified-next-hop 192.168.1.1 {\npreference 50;\n}\n}"
+ },
+ {
+  "id": 100,
+  "topic": "Static Routes",
+  "question": "Which statement is true regarding static routes in Junos OS?",
+  "options": [
+   "Static routes are dynamically advertised to BGP peers by default.",
+   "Static routes remain in the routing table even if the local interface used to reach the next-hop goes down.",
+   "By default, static routes are not advertised to other routing protocols unless explicitly exported via a routing policy.",
+   "A static route always overrides a directly connected route."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Static routes are not advertised to other protocols unless exported by a policy.",
+  "multi": false
+ },
+ {
+  "id": 101,
+  "topic": "Subnetting",
+  "question": "A Juniper router receives a packet destined for the IP address 192.168.10.45. Which of the following subnet masks would include this host address if the network ID is 192.168.10.32?",
+  "options": [
+   "/26",
+   "/27",
+   "/28",
+   "/29"
+  ],
+  "answer": [
+   1,
+   2
+  ],
+  "explanation": "Both /27 (32-63) and /28 (32-47) have network ID .32 and include .45; /26 and /29 do not fit.",
+  "multi": true
+ },
+ {
+  "id": 102,
+  "topic": "Subnetting",
+  "question": "What is the usable host range for the subnet 10.1.1.192/26?",
+  "options": [
+   "10.1.1.193 to 10.1.1.254",
+   "10.1.1.192 to 10.1.1.255",
+   "10.1.1.193 to 10.1.1.255",
+   "10.1.1.192 to 10.1.1.254"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "10.1.1.192/26 spans .192-.255; usable hosts are .193-.254.",
+  "multi": false
+ },
+ {
+  "id": 103,
+  "topic": "Subnetting",
+  "question": "Which of the following is a valid usable host IP address in the network 172.16.48.0/22?",
+  "options": [
+   "172.16.48.0",
+   "172.16.51.255",
+   "172.16.52.1",
+   "172.16.50.100"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "172.16.48.0/22 spans 48.0-51.255; usable hosts are 48.1-51.254, so 50.100 is valid.",
+  "multi": false
+ },
+ {
+  "id": 104,
+  "topic": "Subnetting",
+  "question": "How many usable host IP addresses are available in a standard point-to-point serial link configured with a /30 subnet mask?",
+  "options": [
+   "1",
+   "2",
+   "4",
+   "6"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "A /30 has two usable hosts.",
+  "multi": false
+ },
+ {
+  "id": 105,
+  "topic": "Subnetting",
+  "question": "You need to design a network that accommodates at least 500 hosts per subnet. Which minimum subnet mask should you choose to fulfill this requirement while wasting the fewest addresses?",
+  "options": [
+   "/22",
+   "/23",
+   "/24",
+   "/25"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "/23 gives 510 usable hosts; /24 gives only 254.",
+  "multi": false
+ },
+ {
+  "id": 106,
+  "topic": "Subnetting",
+  "question": "What is the network address (Network ID) for the host IP 192.168.5.138/27?",
+  "options": [
+   "192.168.5.0",
+   "192.168.5.128",
+   "192.168.5.130",
+   "192.168.5.160"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "138 falls in the 128-159 block of a /27, so the network is 192.168.5.128.",
+  "multi": false
+ },
+ {
+  "id": 107,
+  "topic": "Subnetting",
+  "question": "If you divide the classful network 192.168.1.0/24 into /26 subnets, how many total subnets are created, and how many usable hosts are available per subnet?",
+  "options": [
+   "2 subnets, 62 hosts",
+   "4 subnets, 64 hosts",
+   "4 subnets, 62 hosts",
+   "8 subnets, 30 hosts"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "A /24 splits into 4 /26 subnets, each with 62 usable hosts.",
+  "multi": false
+ },
+ {
+  "id": 108,
+  "topic": "Subnetting",
+  "question": "What is the broadcast address for the subnet 172.30.12.64/28?",
+  "options": [
+   "172.30.12.79",
+   "172.30.12.80",
+   "172.30.12.127",
+   "172.30.12.255"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "172.30.12.64/28 covers .64-.79; broadcast is .79.",
+  "multi": false
+ },
+ {
+  "id": 109,
+  "topic": "Subnetting",
+  "question": "A Junos device configuration shows a route with a prefix of /21. What is the equivalent dotted-decimal subnet mask?",
+  "options": [
+   "255.255.240.0",
+   "255.255.248.0",
+   "255.255.252.0",
+   "255.255.254.0"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "/21 is 255.255.248.0.",
+  "multi": false
+ },
+ {
+  "id": 110,
+  "topic": "Subnetting",
+  "question": "Which of the following addresses represents the directed broadcast address for the network prefix 10.20.30.40/29?",
+  "options": [
+   "10.20.30.41",
+   "10.20.30.45",
+   "10.20.30.47",
+   "10.20.30.48"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "10.20.30.40/29 covers .40-.47; broadcast is .47.",
+  "multi": false
+ },
+ {
+  "id": 111,
+  "topic": "TCP & UDP",
+  "question": "A network administrator needs to securely manage a Junos device using the command-line interface (CLI). Which protocol and port number are used by default for this encrypted connection?",
+  "options": [
+   "Telnet / TCP Port 23",
+   "SSH / TCP Port 22",
+   "HTTP / TCP Port 80",
+   "SSL / UDP Port 443"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "SSH uses TCP port 22.",
+  "multi": false
+ },
+ {
+  "id": 112,
+  "topic": "TCP & UDP",
+  "question": "When a Junos device sends system log messages to an external Syslog server, which port and transport layer protocol does it typically use?",
+  "options": [
+   "UDP Port 514",
+   "TCP Port 514",
+   "UDP Port 161",
+   "TCP Port 49"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Syslog uses UDP 514 by default.",
+  "multi": false
+ },
+ {
+  "id": 113,
+  "topic": "TCP & UDP",
+  "question": "Which port must be open on a firewall to allow a Junos device to resolve hostnames via Domain Name System (DNS)?",
+  "options": [
+   "TCP Port 53 only",
+   "UDP Port 67",
+   "UDP Port 53 (and occasionally TCP Port 53)",
+   "UDP Port 69"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "DNS uses UDP 53, and TCP 53 for large responses.",
+  "multi": false
+ },
+ {
+  "id": 114,
+  "topic": "TCP & UDP",
+  "question": "You are configuring an external authentication server for your Junos devices. If you decide to use RADIUS for authentication and authorization, which standard UDP ports should be permitted?",
+  "options": [
+   "UDP Ports 1812 and 1813",
+   "UDP Ports 161 and 162",
+   "TCP Ports 49 and 88",
+   "UDP Ports 67 and 68"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "RADIUS uses UDP 1812 (auth) and 1813 (accounting).",
+  "multi": false
+ },
+ {
+  "id": 115,
+  "topic": "TCP & UDP",
+  "question": "Junos OS uses specific protocols for automated configuration deployment. Which protocol and port are used when retrieving configurations via Trivial File Transfer Protocol (TFTP)?",
+  "options": [
+   "TCP Port 21",
+   "UDP Port 69",
+   "TCP Port 22",
+   "UDP Port 123"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "TFTP uses UDP port 69.",
+  "multi": false
+ },
+ {
+  "id": 116,
+  "topic": "TCP & UDP",
+  "question": "To ensure precise time synchronization across all routers in a Junos network architecture, Network Time Protocol (NTP) must be implemented. NTP operates on which port?",
+  "options": [
+   "UDP Port 123",
+   "TCP Port 123",
+   "UDP Port 514",
+   "TCP Port 179"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "NTP uses UDP 123.",
+  "multi": false
+ },
+ {
+  "id": 117,
+  "topic": "TCP & UDP",
+  "question": "A network technician needs to monitor bandwidth utilization and device health on Juniper switches using Network Management Systems (NMS). Which port do standard SNMP queries use to poll devices?",
+  "options": [
+   "UDP Port 162",
+   "UDP Port 161",
+   "TCP Port 161",
+   "UDP Port 514"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "SNMP queries use UDP 161.",
+  "multi": false
+ },
+ {
+  "id": 118,
+  "topic": "TCP & UDP",
+  "question": "When configuring the Border Gateway Protocol (BGP) to establish a routing peer relationship between two Junos routers, which underlying transport protocol and port are utilized?",
+  "options": [
+   "UDP Port 179",
+   "TCP Port 179",
+   "TCP Port 89",
+   "IP Protocol 89"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "BGP uses TCP port 179.",
+  "multi": false
+ },
+ {
+  "id": 119,
+  "topic": "TCP & UDP",
+  "question": "During the initial ZTP (Zero Touch Provisioning) process, a Junos device requests an IP address and configuration file location. Which ports are utilized by the DHCP client and server to facilitate this exchange?",
+  "options": [
+   "UDP Ports 67 and 68",
+   "TCP Ports 67 and 68",
+   "UDP Ports 53 and 69",
+   "TCP Ports 80 and 443"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "DHCP uses UDP 67 (server) and 68 (client).",
+  "multi": false
+ },
+ {
+  "id": 120,
+  "topic": "TCP & UDP",
+  "question": "You want to use TACACS+ instead of RADIUS for centralized administrative access control to your Junos devices. Which transport layer protocol and port does TACACS+ natively use?",
+  "options": [
+   "UDP Port 49",
+   "TCP Port 49",
+   "TCP Port 88",
+   "UDP Port 1812"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "TACACS+ uses TCP port 49.",
+  "multi": false
+ },
+ {
+  "id": 121,
+  "topic": "TCP & UDP",
+  "question": "Junos Space or alternative web-based platforms use the J-Web interface for graphic configuration management. By default, secure J-Web traffic utilizes which port?",
+  "options": [
+   "TCP Port 80",
+   "TCP Port 8080",
+   "TCP Port 443",
+   "UDP Port 443"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "HTTPS (J-Web secure) uses TCP 443.",
+  "multi": false
+ },
+ {
+  "id": 122,
+  "topic": "TCP & UDP",
+  "question": "When a Junos device needs to transfer large system image files or backup configurations reliably using File Transfer Protocol (FTP), which control port is used to initiate the session?",
+  "options": [
+   "TCP Port 20",
+   "TCP Port 21",
+   "UDP Port 21",
+   "TCP Port 22"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "FTP control connection uses TCP 21.",
+  "multi": false
+ },
+ {
+  "id": 123,
+  "topic": "TCP & UDP",
+  "question": "Which port is used by an SNMP-managed Junos device to proactively send unsolicited alert notifications (Traps or Informs) to a Network Management Station?",
+  "options": [
+   "UDP Port 161",
+   "UDP Port 162",
+   "TCP Port 162",
+   "UDP Port 514"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "SNMP traps are sent to UDP 162.",
+  "multi": false
+ },
+ {
+  "id": 124,
+  "topic": "TCP & UDP",
+  "question": "If an administrator attempts to connect to a Junos router using cleartext, unencrypted terminal emulation via Telnet, what port is targeted?",
+  "options": [
+   "TCP Port 22",
+   "TCP Port 23",
+   "UDP Port 23",
+   "TCP Port 80"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Telnet uses TCP 23.",
+  "multi": false
+ },
+ {
+  "id": 125,
+  "topic": "TCP & UDP",
+  "question": "Junos OS supports NETCONF for network automation and programmability. What is the default TCP port defined by the IETF for NETCONF over SSH sessions?",
+  "options": [
+   "TCP Port 22",
+   "TCP Port 830",
+   "TCP Port 829",
+   "UDP Port 830"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "NETCONF over SSH uses TCP 830 by default.",
+  "multi": false
+ },
+ {
+  "id": 126,
+  "topic": "Interfaces",
+  "question": "Which command would you use to display a brief summary of all interfaces on a Junos device, including their operational status and IP addresses?",
+  "options": [
+   "show interfaces status",
+   "show interfaces brief",
+   "show interfaces terse",
+   "show configuration interfaces"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "show interfaces terse summarizes interface status and addresses.",
+  "multi": false
+ },
+ {
+  "id": 127,
+  "topic": "Interfaces",
+  "question": "You execute the command show interfaces ge-0/0/0. What does the \"ge\" prefix represent?",
+  "options": [
+   "Gigabit Ethernet",
+   "Generic Encapsulation",
+   "Global Ethernet",
+   "Granular Ethernet"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "ge means Gigabit Ethernet.",
+  "multi": false
+ },
+ {
+  "id": 128,
+  "topic": "Interfaces",
+  "question": "In the interface identifier xe-1/2/3.0, what does the number .0 represent?",
+  "options": [
+   "The physical port number",
+   "The slot number",
+   "The FPC number",
+   "The logical unit number"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "The .0 is the logical unit number.",
+  "multi": false
+ },
+ {
+  "id": 129,
+  "topic": "Interfaces",
+  "question": "Which operational command displays detailed hardware-level statistics, physical layer errors, and media information for a specific interface?",
+  "options": [
+   "show interfaces ge-0/0/0 detailed",
+   "show interfaces ge-0/0/0 extensive",
+   "show interfaces ge-0/0/0 hardware",
+   "show interfaces ge-0/0/0 diagnostics"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "show interfaces <name> extensive shows detailed counters, errors, and media info.",
+  "multi": false
+ },
+ {
+  "id": 130,
+  "topic": "Interfaces",
+  "question": "When reviewing the output of show interfaces terse, you see an interface status listed as \"up down\". What does this specific combination indicate?",
+  "options": [
+   "The physical layer is up, but the logical layer/protocol is down.",
+   "The physical layer is down, but the logical layer is administratively enabled.",
+   "The interface is administratively disabled (down) but has a cable plugged in (up).",
+   "The interface is in a transition loop state."
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Admin up, link/protocol down: the physical state is up but the logical state is down.",
+  "multi": false
+ },
+ {
+  "id": 131,
+  "topic": "Interfaces",
+  "question": "Which command allows you to view real-time, dynamically updating traffic statistics and packet counts for all interfaces?",
+  "options": [
+   "show interfaces stats",
+   "monitor interface traffic",
+   "view interfaces real-time",
+   "monitor traffic interface ge-0/0/0"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "monitor interface traffic shows live statistics for all interfaces.",
+  "multi": false
+ },
+ {
+  "id": 132,
+  "topic": "Interfaces",
+  "question": "You need to clear the accumulated packet counters and error statistics on interface ge-0/0/5 without restarting the interface. Which command should you use?",
+  "options": [
+   "clear interfaces statistics ge-0/0/5",
+   "reset interfaces counters ge-0/0/5",
+   "flush interfaces ge-0/0/5",
+   "clear interfaces ge-0/0/5 statistics"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "clear interfaces statistics <name> resets counters without restarting the interface.",
+  "multi": false
+ },
+ {
+  "id": 133,
+  "topic": "Interfaces",
+  "question": "If an interface is administratively disabled using the disable command in configuration mode, how will its status be displayed in the output of show interfaces terse?",
+  "options": [
+   "down down",
+   "up down",
+   "down up",
+   "up up"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "An administratively disabled interface shows down in both columns of terse output.",
+  "multi": false
+ },
+ {
+  "id": 134,
+  "topic": "Interfaces",
+  "question": "Which command specifically displays the internal loopback and management interfaces along with the physical interfaces on a single screen?",
+  "options": [
+   "show interfaces descriptions",
+   "show interfaces terse",
+   "show interfaces summary",
+   "show interfaces sparse"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "show interfaces terse lists physical, loopback, and management interfaces.",
+  "multi": false
+ },
+ {
+  "id": 135,
+  "topic": "Interfaces",
+  "question": "A colleague wants to see the transceiver details (optical output power, temperature, laser bias current) for a fiber optic interface. Which command provides this exhibition data?",
+  "options": [
+   "show interfaces diagnostics optics",
+   "show chassis hardware detailed",
+   "show interfaces ge-0/0/0 diagnostics optics",
+   "show interfaces ge-0/0/0 transceiver"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "show interfaces diagnostics optics <name> shows optical power, temperature, and bias current.",
+  "multi": false
+ },
+ {
+  "id": 136,
+  "topic": "Set Commands",
+  "question": "Which command allows you to enter configuration mode where you can use the set command to modify the system configuration?",
+  "options": [
+   "set cli configuration",
+   "configure",
+   "edit system",
+   "request system configuration"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "configure enters configuration mode.",
+  "multi": false
+ },
+ {
+  "id": 137,
+  "topic": "Set Commands",
+  "question": "Which command changes the configuration syntax view from the hierarchical curly-brace format to a flat list of set statements?",
+  "options": [
+   "show configuration | display set",
+   "show | display set",
+   "run show configuration set",
+   "show set"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "| display set shows the configuration as set statements.",
+  "multi": false
+ },
+ {
+  "id": 138,
+  "topic": "Set Commands",
+  "question": "What is the correct syntax to assign an IPv4 address to the ge-0/0/0.0 interface using the set command?",
+  "options": [
+   "set interfaces ge-0/0/0 unit 0 family inet address 192.168.1.1/24",
+   "set interface ge-0/0/0.0 inet address 192.168.1.1 netmask 255.255.255.0",
+   "set ge-0/0/0 unit 0 ip address 192.168.1.1/24",
+   "set networking interface ge-0/0/0.0 address 192.168.1.1/24"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "IPv4 address: set interfaces ge-0/0/0 unit 0 family inet address <ip/len>.",
+  "multi": false
+ },
+ {
+  "id": 139,
+  "topic": "Set Commands",
+  "question": "You are at the [edit interfaces ge-0/0/0] hierarchy level. Which command properly configures a description for this interface?",
+  "options": [
+   "set description \"Uplink to Core\"",
+   "set interfaces ge-0/0/0 description \"Uplink to Core\"",
+   "set description = \"Uplink to Core\"",
+   "Both A and B are valid depending on absolute vs. relative paths."
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "At the [edit interfaces ge-0/0/0] level, set is relative: set description \"...\".",
+  "multi": false
+ },
+ {
+  "id": 140,
+  "topic": "Set Commands",
+  "question": "Which set command is used to define the root authentication password on a Junos device?",
+  "options": [
+   "set system root-login password",
+   "set system root-authentication plain-text-password",
+   "set root authentication password",
+   "set security root password"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "set system root-authentication plain-text-password sets the root password.",
+  "multi": false
+ },
+ {
+  "id": 141,
+  "topic": "Set Commands",
+  "question": "If you want to configure a static route to 10.0.0.0/8 with a next-hop IP of 192.168.1.254, which set command is correct?",
+  "options": [
+   "set routing-options static route 10.0.0.0/8 next-hop 192.168.1.254",
+   "set protocols static-route 10.0.0.0/8 gateway 192.168.1.254",
+   "set ip route 10.0.0.0 255.0.0.0 192.168.1.254",
+   "set routing-instances static route 10.0.0.0/8 next-hop 192.168.1.254"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Static routes: set routing-options static route <prefix> next-hop <ip>.",
+  "multi": false
+ },
+ {
+  "id": 142,
+  "topic": "Set Commands",
+  "question": "Which command is used to revert a specific configuration attribute or delete a statement previously created with a set command?",
+  "options": [
+   "unset",
+   "remove",
+   "delete",
+   "undo"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "delete removes a configuration statement.",
+  "multi": false
+ },
+ {
+  "id": 143,
+  "topic": "Set Commands",
+  "question": "Which command is used to change the hostname of a Junos device?",
+  "options": [
+   "set system hostname <name>",
+   "set system host-name <name>",
+   "set device name <name>",
+   "set protocols system hostname <name>"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The command is set system host-name <name>.",
+  "multi": false
+ },
+ {
+  "id": 144,
+  "topic": "Set Commands",
+  "question": "While in configuration mode, you want to view the changes you have made with your set commands before committing them. Which command should you use?",
+  "options": [
+   "show compare",
+   "show | compare",
+   "show delta",
+   "run show configuration compare"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "show | compare shows pending changes.",
+  "multi": false
+ },
+ {
+  "id": 145,
+  "topic": "Set Commands",
+  "question": "Which command will move your current editing context to a specific hierarchy level so that you can write shorter set commands?",
+  "options": [
+   "move",
+   "cd",
+   "edit",
+   "goto"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "edit moves to a hierarchy level so later commands are relative.",
+  "multi": false
+ },
+ {
+  "id": 146,
+  "topic": "User Accounts",
+  "question": "What is the default administrative user account used to log into a Junos device in its factory-default configuration?",
+  "options": [
+   "admin",
+   "supervisor",
+   "root",
+   "juniper"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The default administrative account is root.",
+  "multi": false
+ },
+ {
+  "id": 147,
+  "topic": "User Accounts",
+  "question": "What is the maximum number of login classes that can be simultaneously assigned to a single specific Junos OS user account?",
+  "options": [
+   "1",
+   "2",
+   "4",
+   "Unlimited"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Each user account can be assigned only one login class.",
+  "multi": false
+ },
+ {
+  "id": 148,
+  "topic": "User Accounts",
+  "question": "You are creating a new user account using a predefined login class. The account must be able to run operational mode commands such as show interfaces and ping, but must not be allowed to enter configuration mode or modify files. Which login class meets this requirement?",
+  "options": [
+   "operator",
+   "read-only",
+   "maintenance",
+   "unauthorized"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "read-only allows viewing and operational commands but no configuration changes.",
+  "multi": false
+ },
+ {
+  "id": 149,
+  "topic": "User Accounts",
+  "question": "Which predefined Junos login class grants full administrative permissions, allowing a user to view, edit, modify, and commit any configuration?",
+  "options": [
+   "operator",
+   "super-user",
+   "administrator",
+   "maintenance"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "super-user has full permissions.",
+  "multi": false
+ },
+ {
+  "id": 150,
+  "topic": "User Accounts",
+  "question": "When a user logs into a Junos device CLI, what character at the end of the command prompt indicates that the user is in operational mode?",
+  "options": [
+   "#",
+   "$",
+   ">",
+   "%"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Operational mode prompt ends in >.",
+  "multi": false
+ },
+ {
+  "id": 151,
+  "topic": "User Accounts",
+  "question": "When a user types the configure command to modify settings, what character at the end of the prompt indicates that the user has successfully entered configuration mode?",
+  "options": [
+   ">",
+   "#",
+   "%",
+   "*"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Configuration mode prompt ends in #.",
+  "multi": false
+ },
+ {
+  "id": 152,
+  "topic": "User Accounts",
+  "question": "Which Junos login class allows a user to look at the configuration and run standard monitoring/troubleshooting tools (like show commands) but completely blocks them from executing any configuration changes or using the commit command?",
+  "options": [
+   "operator",
+   "read-only",
+   "unauthorized",
+   "basic-user"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "read-only blocks configuration changes and commit.",
+  "multi": false
+ },
+ {
+  "id": 153,
+  "topic": "User Accounts",
+  "question": "When a username needs to be authenticated via a remote server before fallback to the local device database, which authentication service order configuration should be applied under [edit system]?",
+  "options": [
+   "authentication-order [ password radius ]",
+   "authentication-order [ radius password ]",
+   "authentication-order [ tacacs radius ]",
+   "authentication-order [ local remote ]"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "authentication-order [ radius password ] tries RADIUS first, then the local database.",
+  "multi": false
+ },
+ {
+  "id": 154,
+  "topic": "User Accounts",
+  "question": "Under which configuration hierarchy path do you define a new user account, its login class, and its authentication credentials?",
+  "options": [
+   "[edit system login]",
+   "[edit user-accounts]",
+   "[edit security users]",
+   "[edit interfaces user]"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "User accounts are defined under [edit system login].",
+  "multi": false
+ },
+ {
+  "id": 155,
+  "topic": "User Accounts",
+  "question": "If a custom login class is needed to restrict a group of usernames to only a specific set of configuration hierarchies, which keyword is used within the class declaration to allow or deny explicit access regex paths?",
+  "options": [
+   "access-level",
+   "permit-deny",
+   "permissions",
+   "allow-commands"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "In a login class, permissions (with allow/deny configuration regex) controls access.",
+  "multi": false
+ },
+ {
+  "id": 156,
+  "topic": "IPv4 & IPv6",
+  "question": "Which Junos OS command is used to configure a static IPv4 address on a physical interface?",
+  "options": [
+   "set interfaces ge-0/0/0 unit 0 family inet address 192.168.1.1/24",
+   "set interfaces ge-0/0/0 ip address 192.168.1.1 255.255.255.0",
+   "set interfaces ge-0/0/0 unit 0 family ipv4 address 192.168.1.1/24",
+   "set ip address 192.168.1.1/24 interface ge-0/0/0"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "IPv4 addressing: unit 0 family inet address <ip/len>.",
+  "multi": false
+ },
+ {
+  "id": 157,
+  "topic": "IPv4 & IPv6",
+  "question": "What is the valid range of the first octet for a Class B IPv4 address?",
+  "options": [
+   "1–126",
+   "128–191",
+   "192–223",
+   "224–239"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "Class B first octet is 128-191.",
+  "multi": false
+ },
+ {
+  "id": 158,
+  "topic": "IPv4 & IPv6",
+  "question": "Given the IPv4 address 172.16.45.100/26, what is the network address for this subnet?",
+  "options": [
+   "172.16.45.0",
+   "172.16.45.32",
+   "172.16.45.64",
+   "172.16.45.96"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "172.16.45.100/26 is in the .64-.127 block; network is 172.16.45.64.",
+  "multi": false
+ },
+ {
+  "id": 159,
+  "topic": "IPv4 & IPv6",
+  "question": "Which of the following IPv4 addresses belongs to the private address space defined by RFC 1918?",
+  "options": [
+   "172.32.10.5",
+   "192.169.1.50",
+   "10.255.255.1",
+   "169.254.1.1"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "10.0.0.0/8 is RFC 1918 private space.",
+  "multi": false
+ },
+ {
+  "id": 160,
+  "topic": "IPv4 & IPv6",
+  "question": "How many usable host IPv4 addresses are available in a /28 subnet?",
+  "options": [
+   "30",
+   "16",
+   "14",
+   "6"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "A /28 has 16 addresses, 14 usable.",
+  "multi": false
+ },
+ {
+  "id": 161,
+  "topic": "IPv4 & IPv6",
+  "question": "Which field in the IPv4 header is used to prevent routing loops by limiting the lifespan of a packet?",
+  "options": [
+   "Protocol",
+   "Header Checksum",
+   "Time to Live (TTL)",
+   "Differentiated Services Field (DiffServ)"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "TTL limits packet lifetime and prevents routing loops.",
+  "multi": false
+ },
+ {
+  "id": 162,
+  "topic": "IPv4 & IPv6",
+  "question": "You need to assign an IPv4 address to a point-to-point serial link to conserve address space as much as possible. Which subnet mask is recommended?",
+  "options": [
+   "/29",
+   "/30",
+   "/31",
+   "/32"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "/31 is the most economical point-to-point mask (RFC 3021).",
+  "multi": false
+ },
+ {
+  "id": 163,
+  "topic": "IPv4 & IPv6",
+  "question": "What type of IPv4 transmission delivers packets from a single source to all devices on a local network segment?",
+  "options": [
+   "Unicast",
+   "Multicast",
+   "Anycast",
+   "Broadcast"
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "Broadcast goes to all devices on the local segment.",
+  "multi": false
+ },
+ {
+  "id": 164,
+  "topic": "IPv4 & IPv6",
+  "question": "In Junos OS, which family must be enabled under an interface configuration to support IPv4 routing?",
+  "options": [
+   "ip",
+   "inet",
+   "inet4",
+   "ipv4"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "family inet enables IPv4.",
+  "multi": false
+ },
+ {
+  "id": 165,
+  "topic": "IPv4 & IPv6",
+  "question": "What is the broadcast address for the subnet 192.168.10.128/25?",
+  "options": [
+   "192.168.10.255",
+   "192.168.10.191",
+   "192.168.10.127",
+   "192.168.11.255"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "192.168.10.128/25 spans .128-.255; broadcast is .255.",
+  "multi": false
+ },
+ {
+  "id": 166,
+  "topic": "IPv4 & IPv6",
+  "question": "Which of the following is the correct representation of the IPv6 loopback address?",
+  "options": [
+   "::",
+   "::1",
+   "FE80::1",
+   "2001::1"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "::1 is the IPv6 loopback.",
+  "multi": false
+ },
+ {
+  "id": 167,
+  "topic": "IPv4 & IPv6",
+  "question": "Which IPv6 address prefix is strictly reserved for link-local scoping?",
+  "options": [
+   "FC00::/7",
+   "2001::/3",
+   "FE80::/10",
+   "FF00::/8"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "FE80::/10 is link-local.",
+  "multi": false
+ },
+ {
+  "id": 168,
+  "topic": "IPv4 & IPv6",
+  "question": "What is the total length of an IPv6 address in bits?",
+  "options": [
+   "32 bits",
+   "64 bits",
+   "128 bits",
+   "256 bits"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "IPv6 addresses are 128 bits.",
+  "multi": false
+ },
+ {
+  "id": 169,
+  "topic": "IPv4 & IPv6",
+  "question": "When compressing the IPv6 address 2001:0db8:0000:0000:0000:ff00:0042:8329, which of the following is a valid shortened format?",
+  "options": [
+   "2001:db8::ff00:42:8329",
+   "2001:db8:0:0:0:ff:42:8329",
+   "2001:db8::ff:42:8329",
+   "2001:0db8::ff00:0042:8329"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Runs of zeros collapse to ::, leading zeros drop: 2001:db8::ff00:42:8329.",
+  "multi": false
+ },
+ {
+  "id": 170,
+  "topic": "IPv4 & IPv6",
+  "question": "In IPv6, which protocol replaces the Address Resolution Protocol (ARP) used in IPv4 to map IP addresses to MAC addresses?",
+  "options": [
+   "Internet Control Message Protocol version 6 (ICMPv6)",
+   "Neighbor Discovery Protocol (NDP)",
+   "DHCPv6",
+   "Path MTU Discovery"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "IPv6 uses Neighbor Discovery Protocol instead of ARP.",
+  "multi": false
+ },
+ {
+  "id": 171,
+  "topic": "IPv4 & IPv6",
+  "question": "Which statement is true regarding the IPv6 header compared to the IPv4 header?",
+  "options": [
+   "The IPv6 header has a variable size depending on the options used.",
+   "The IPv6 header contains a Checksum field to ensure packet integrity.",
+   "The IPv6 header has a fixed size of 40 bytes.",
+   "The IPv6 header includes a Time to Live (TTL) field."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The IPv6 header is a fixed 40 bytes.",
+  "multi": false
+ },
+ {
+  "id": 172,
+  "topic": "IPv4 & IPv6",
+  "question": "Which IPv6 address type delivers a packet to a single interface belonging to a specific node?",
+  "options": [
+   "Unicast",
+   "Multicast",
+   "Anycast",
+   "Broadcast"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Unicast delivers to a single interface.",
+  "multi": false
+ },
+ {
+  "id": 173,
+  "topic": "IPv4 & IPv6",
+  "question": "Which prefix is used specifically for IPv6 multicast addresses?",
+  "options": [
+   "FE80::/10",
+   "FC00::/7",
+   "FF00::/8",
+   "2001::/3"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "IPv6 multicast is FF00::/8.",
+  "multi": false
+ },
+ {
+  "id": 174,
+  "topic": "IPv4 & IPv6",
+  "question": "When an IPv6 host automatically configures its own IP address using Stateless Address Autoconfiguration (SLAAC), which protocol or mechanism does it rely on to learn the network prefix?",
+  "options": [
+   "DHCPv6 Information-Request messages",
+   "Router Advertisement (RA) messages",
+   "Neighbor Solicitation (NS) messages",
+   "Static local configuration"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "SLAAC learns the prefix from Router Advertisements.",
+  "multi": false
+ },
+ {
+  "id": 175,
+  "topic": "IPv4 & IPv6",
+  "question": "What is the equivalent of the IPv4 default route (0.0.0.0/0) in IPv6?",
+  "options": [
+   "::/0",
+   "::1/128",
+   "FE80::/10",
+   "FF02::1/64"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "::/0 is the IPv6 default route.",
+  "multi": false
+ },
+ {
+  "id": 176,
+  "topic": "Routing Table",
+  "question": "What is the main function of the forwarding table on a Junos device?",
+  "options": [
+   "It determines the best route based on route preference.",
+   "It advertises routes to neighboring routers.",
+   "It stores all learned routes from routing protocols.",
+   "It contains only active routes used to forward packets through the PFE."
+  ],
+  "answer": [
+   3
+  ],
+  "explanation": "The forwarding table holds only active routes used by the PFE.",
+  "multi": false
+ },
+ {
+  "id": 177,
+  "topic": "Routing Table",
+  "question": "Which statement is correct when Router R1 receives a packet from User A destined for User B as shown in the exhibit?",
+  "options": [
+   "Router R1 replaces the destination IP address in the packet with the IP address of Router R2.",
+   "Router R1 leaves the packet unchanged.",
+   "Router R1 replaces the destination MAC address in the packet with the MAC address of Router R2.",
+   "Router R1 replaces the destination MAC address in the packet with the MAC address of User B."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The router rewrites the destination MAC to the next hop's (R2) MAC; the IP packet is unchanged.",
+  "multi": false
+ },
+ {
+  "id": 178,
+  "topic": "Routing Table",
+  "question": "What is the default master routing table in Junos OS for IPv4 unicast information?",
+  "options": [
+   "inet.0",
+   "inet6.0",
+   "inet.3",
+   "bgp.0"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "inet.0 is the IPv4 unicast table.",
+  "multi": false
+ },
+ {
+  "id": 179,
+  "topic": "Routing Table",
+  "question": "Which default master routing table does Junos OS utilize for IPv6 unicast reachability information?",
+  "options": [
+   "inet.0",
+   "inet6.0",
+   "inet.1",
+   "iso.0"
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "inet6.0 is the IPv6 unicast table.",
+  "multi": false
+ },
+ {
+  "id": 180,
+  "topic": "Show Command Output",
+  "question": "Which statement is true regarding this interface?",
+  "options": [
+   "The interface is administratively disabled.",
+   "The IP address 192.168.1.1 is configured on the physical layer.",
+   "The logical interface ge-0/0/0.0 is operational and configured with the IPv4 protocol.",
+   "The interface is currently running in loopback mode for testing."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The logical unit ge-0/0/0.0 is Up with protocol inet and address 192.168.1.1.",
+  "multi": false,
+  "intro": "Given the following output from a Junos device:",
+  "code": "user@router> show interfaces ge-0/0/0\nPhysical interface: ge-0/0/0, Enabled, Physical link is Up\nLink-level type: Ethernet, MTU: 1514, Speed: 1000mbps, Loopback: None, Source filtering: Disabled\nDevice flags   : Present Running\nInterface flags: SNMP-Internal\nLogical interface: ge-0/0/0.0 (Index 72) (SNMP ifIndex 507)\nFlags: Up SNMP-Internal Encapsulation: ENET2\nProtocol inet, Addresses (Addresses Flags: Is-Preferred Is-Primary)\nDestination: 192.168.1.0/24, Local: 192.168.1.1, Broadcast: 192.168.1.255"
+ },
+ {
+  "id": 181,
+  "topic": "Show Command Output",
+  "question": "Based on this output, what should be your immediate administrative action?",
+  "options": [
+   "Clean up the /var directory using request system storage cleanup.",
+   "Delete old log files and Junos images to free up space in the / root directory.",
+   "Increase the size of the /config partition immediately.",
+   "Reboot the router to clear the transient data in devfs."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "The / (root) filesystem is 98% used; delete old logs and Junos images.",
+  "multi": false,
+  "intro": "You execute the show system storage command and receive the following output:",
+  "code": "Filesystem              Size       Used      Avail  Capacity   Mounted on\n/dev/gpt/junos          20G        18G       400M        98%   /\ndevfs                   1.0K       1.0K         0B       100%   /dev\n/dev/gpt/config         100M        12M        80M        13%   /config\n/dev/gpt/var            15G        3.2G        11G        23%   /var"
+ },
+ {
+  "id": 182,
+  "topic": "Show Command Output",
+  "question": "Which operational command was executed to display this information?",
+  "options": [
+   "show system alarms",
+   "show chassis alarms",
+   "show configuration rescue",
+   "show system status"
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "show system alarms displays this system alarm.",
+  "multi": false,
+  "intro": "You run a command and see the following text:",
+  "code": "Active Alarms:\n1 alarms present\nActive Alarms:\nTime                    Class       Type         Fault Effect\n2026-11-01 12:00:00 UTC Major       Configuration Rescue configuration is not set"
+ },
+ {
+  "id": 183,
+  "topic": "Show Command Output",
+  "question": "What information can be definitively determined from this command?",
+  "options": [
+   "The device configuration was last changed less than 4 hours ago.",
+   "The routing protocols failed and restarted 2 weeks ago.",
+   "The admin user is currently logged into the configuration mode.",
+   "The system requires a reboot to apply the latest configuration changes."
+  ],
+  "answer": [
+   0
+  ],
+  "explanation": "Last configured was 03:29 ago, under 4 hours.",
+  "multi": false,
+  "intro": "Examine the output provided below:",
+  "code": "user@router> show system uptime\nCurrent time: 2026-11-01 13:45:02 UTC\nSystem booted: 2026-10-15 08:30:00 UTC (2w2d 05:15 ago)\nProtocols started: 2026-10-15 08:32:12 UTC (2w2d 05:12 ago)\nLast configured: 2026-11-01 10:15:30 UTC (03:29:32 ago) by admin"
+ },
+ {
+  "id": 184,
+  "topic": "Show Command Output",
+  "question": "What does this configuration output represent?",
+  "options": [
+   "A stateless firewall filter applied to drop all incoming transit traffic on ge-0/0/4.0.",
+   "A configuration mode view showing a firewall filter applied to incoming traffic on the logical interface.",
+   "An operational mode check validating that the protect-routing-engine policy is active on the control plane.",
+   "A security zone assignment blocking all IPv4 traffic."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "This is a configuration-mode view showing a filter applied to input on the logical interface.",
+  "multi": false,
+  "intro": "Consider the output of the following command:",
+  "code": "user@router# show interfaces ge-0/0/4\nunit 0 {\nfamily inet {\nfilter {\ninput protect-routing-engine;\n}\naddress 10.0.0.1/30;\n}\n}"
+ },
+ {
+  "id": 185,
+  "topic": "Show Command Output",
+  "question": "What is the default preference value assigned to this route type in Junos?",
+  "options": [
+   "5",
+   "1",
+   "0",
+   "150"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "Direct routes have preference 0.",
+  "multi": false,
+  "intro": "You execute the show validation variant or look at show route status and see the following entry:",
+  "code": "inet.0: 5 destinations, 5 routes (5 active, 0 holddown, 0 hidden)\n+ = Active Route, - = Last Active, * = Both\n192.168.50.0/24    *[Direct/0] 04:12:00\nvia ge-0/0/3.0"
+ },
+ {
+  "id": 186,
+  "topic": "Show Command Output",
+  "question": "What does this output tell you about the user network_eng?",
+  "options": [
+   "They are logged in directly via a local console serial connection (TTY).",
+   "They are currently executing commands within the Junos operational CLI mode.",
+   "They are logged in remotely and have dropped into the underlying UNIX/FreeBSD shell.",
+   "Their session has timed out and is currently dead."
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "The process shown is a shell (csh), so the user is at the UNIX shell, not the CLI.",
+  "multi": false,
+  "intro": "Review the following output:",
+  "code": "user@router> show system users\n1:53PM  up 16 days,  5:23, 2 users, load averages: 0.02, 0.04, 0.01\nUSER     TTY      FROM                              LOGIN@  IDLE WHAT\nadmin    p0       192.168.10.15                    1:10PM      - cli\nnetwork_eng p1    192.168.20.44                    1:45PM      2 -csh"
+ },
+ {
+  "id": 187,
+  "topic": "Show Command Output",
+  "question": "If a route for 192.168.10.0/24 is evaluated against the export-bgp policy, what action will Junos take?",
+  "options": [
+   "The route will be accepted because it matches accept-rest.",
+   "The route will be rejected because it matches the 192.168.0.0/16 orlonger criteria.",
+   "The route will be evaluated by the default BGP export policy instead.",
+   "The route will be discarded because it lacks a matching community string."
+  ],
+  "answer": [
+   1
+  ],
+  "explanation": "192.168.10.0/24 matches 192.168.0.0/16 orlonger in the first term, so it is rejected.",
+  "multi": false,
+  "intro": "Analyze the output from the following command:",
+  "code": "user@router> show configuration policy-options\npolicy-statement export-bgp {\nterm block-internal {\nfrom route-filter 192.168.0.0/16 orlonger;\nthen reject;\n}\nterm accept-rest {\nthen accept;\n}\n}"
+ },
+ {
+  "id": 188,
+  "topic": "Show Command Output",
+  "question": "Which operational command was used to generate this specific environmental output?",
+  "options": [
+   "show chassis hardware",
+   "show system processes",
+   "show chassis routing-engine",
+   "show system performance"
+  ],
+  "answer": [
+   2
+  ],
+  "explanation": "show chassis routing-engine shows RE temperature, CPU, and memory.",
+  "multi": false,
+  "intro": "You issue a command to check the physical hardware environment and get the following data:",
+  "code": "user@router> show...\nRouting Engine status:\nTemperature                 35 degrees C / 95 degrees F\nCPU temperature             40 degrees C / 104 degrees F\nMemory utilization          45%\nCPU utilization             5%"
+ }
+]
